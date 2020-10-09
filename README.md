@@ -7,6 +7,8 @@ R.J. Gassner
 
 Lesson Planner (Placeholder Title)
 
+Please see the Project_Proposal Folder for Adobe XD files. The pdf file contains the same text as this document, but also includes some of the required screenshots.
+
 # Introduction:
 Lesson Planner (Placeholder title) is a platform that seeks to aid teachers with one of their most important, and sometimes most frustrating tasks: Lesson Planning! This app will allow teachers to do what they do best: create dynamic lessons for their students, without worrying about conforming to a district’s specific lesson plan format on their own. Teachers will input the necessary information for their lesson plans, and this app will automatically generate a lesson plan that includes all their information, and is formatted to district, county, and/or state required formatting. 
 
