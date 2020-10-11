@@ -59,3 +59,8 @@ Teachers today face more challenges than ever before, and these challenges have 
 
 #Adobe XD Link
 [Link to Matt's XD drafts of the UI](https://xd.adobe.com/view/620cbccd-f54d-4a92-96ed-8e5eb39cf282-375f/)
+<img src="./img/lp1.png">
+<img src="./img/lp.png">
+![Alt Text](img src="./img/lp2.png")
+<img src="./img/lp3.png">
+
