@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import "./css/styles.css"
+import Login from "./components/login"
 
 function App() {
   return (
     <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+
+      <div className="tile is-8 is-parent " id="right"></div>
+    <div className="tile is-5 is-parent" id="left">
+     <Login/>
+    </div>
     </div>
   );
 }
