@@ -24,6 +24,11 @@ body {
     margin-top: 0;
 }
 
+.openbook {
+    max-width: 60%;
+    max-height: 20%;
+}
+
 .name,
 .hr,
 .job,
