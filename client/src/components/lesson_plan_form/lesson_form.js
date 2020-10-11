@@ -23,7 +23,7 @@ function lessonForm() {
 
         //Materials & Resources
 
-        //The above is the "boiler plate" of a lesson plan that will help whoever reads the plan identify what age group/class the lesson is for and what they are to be learning. The below is the procedures for the lesson. 
+        //The above is the "boiler plate" of a lesson plan that will help whoever reads the plan identify what age group/class the lesson is for, what is needed to complete the lesson, and what they are to be learning. The below is the procedures for the lesson. 
 
         //Goal
 
