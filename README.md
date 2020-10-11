@@ -7,6 +7,8 @@ R.J. Gassner
 
 Lesson Planner (Placeholder Title)
 
+Please see the Project_Proposal Folder for Adobe XD files. The pdf file contains the same text as this document, but also includes some of the required screenshots.
+
 # Introduction:
 Lesson Planner (Placeholder title) is a platform that seeks to aid teachers with one of their most important, and sometimes most frustrating tasks: Lesson Planning! This app will allow teachers to do what they do best: create dynamic lessons for their students, without worrying about conforming to a district’s specific lesson plan format on their own. Teachers will input the necessary information for their lesson plans, and this app will automatically generate a lesson plan that includes all their information, and is formatted to district, county, and/or state required formatting. 
 
@@ -55,7 +57,10 @@ As one can see, what starts as just a simple lesson plan generator can (with eno
 # Conclusion
 Teachers today face more challenges than ever before, and these challenges have only been compounded by the current global health crisis. Teachers play a vital role in our society, yet far too many of them are not being given the support they need, and far too many great teachers end up leaving the profession, creating teacher shortages, and resulting in the standards teachers are held to being lowered. While this application will in no way solve all of the issues facing teachers, our hope is that in some small way, this application will allow those who nurture future generations to find at least one small part of their job a bit easier. 
 
+#Adobe XD Link
+[Link to Matt's XD drafts of the UI](https://xd.adobe.com/view/620cbccd-f54d-4a92-96ed-8e5eb39cf282-375f/)
 <img src="./img/lp1.png">
 <img src="./img/lp.png">
-<img src="./img/lp2.png">
+![Alt Text](img src="./img/lp2.png")
 <img src="./img/lp3.png">
+
