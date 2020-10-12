@@ -26,6 +26,9 @@ function Login(){
 
   
     return (
+      <>
+      <div className="tile is-8 is-parent " id="right"></div>
+      <div className="tile is-5 is-parent" id="left">
       <form onSubmit={onSubmit}>
       <div className="tile is-child">
         <p className="title is-2 name">L-plan</p>
@@ -62,6 +65,8 @@ function Login(){
         </div>
       </div>
       </form>
+      </div>
+      </>
     );
   
 
