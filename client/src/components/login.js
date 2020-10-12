@@ -13,7 +13,6 @@ function Login(){
       email,
       password
     };
-
     axios.post("/api/auth/register_login", userData)
     .then(res => {
       console.log(res);
