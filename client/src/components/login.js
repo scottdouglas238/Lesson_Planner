@@ -1,27 +1,47 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import img from "../media/58a1cef7e33a543010fac265.png";
+import axios from "axios";
+function Login(){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-class Login extends Component {
-  render() {
+
+  const onSubmit = e => {
+    e.preventDefault()
+
+    const userData = {
+      email,
+      password
+    };
+
+    axios.post("/api/auth/register_login", userData)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }
+
+
+  
     return (
+      <form onSubmit={onSubmit}>
       <div className="tile is-child">
         <p className="title is-2 name">L-plan</p>
         <hr className="hr" />
         <div className="content has-text-grey description">
           <div className="field">
             <p className="control has-icons-left has-icons-right">
-              <input className="input" type="email" placeholder="Email" />
+              <input className="input" type="email" placeholder="Email" onChange={e => {setEmail(e.target.value)}}/>
               <span className="icon is-small is-left">
                 <i className="fas fa-envelope" />
-              </span>
-              <span className="icon is-small is-right">
-                <i className="fas fa-check" />
               </span>
             </p>
           </div>
           <div className="field">
             <p className="control has-icons-left">
-              <input className="input" type="password" placeholder="Password" />
+              <input className="input" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
               <span className="icon is-small is-left">
                 <i className="fas fa-lock" />
               </span>
@@ -41,7 +61,9 @@ class Login extends Component {
           </div>
         </div>
       </div>
+      </form>
     );
-  }
+  
+
 }
 export default Login;
