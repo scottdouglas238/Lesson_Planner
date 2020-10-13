@@ -6,9 +6,13 @@ module.exports = function(app){
     app.use("/api/auth", auth);
     app.get("/", (req, res)=> res.send("Logged In."));
 
+
+    
+
     app.post("/api/lessons", (req, res)=>{
        const lesson = new db(req.body);
        db.create(lesson).then(dbLesson=>{res.json(dbLesson)}); 
     })
+
 
 }
