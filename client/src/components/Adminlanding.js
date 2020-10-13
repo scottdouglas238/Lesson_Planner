@@ -30,9 +30,7 @@ function AdminLanding() {
               {/* <!-- your lesson plans --> */}
               <div class="tile is-ancestor has-text-centered">
                 <LessonTile />
-                <LessonTile />
-                <LessonTile />
-                <LessonTile />
+                
               </div>
             </section>
             {/* <!-- your lesson plans -->
@@ -52,9 +50,7 @@ function AdminLanding() {
 
               <div class="tile is-ancestor has-text-centered">
                 <LessonTile />
-                <LessonTile />
-                <LessonTile />
-                <LessonTile />
+                
               </div>
             </section>
             {/* <!-- department lesson plans --> */}
