@@ -51,7 +51,6 @@ function lessonPlanForm() {
        // })
        //.catch(err => console.log(err));
         //look at lines 28 and 29 of example and figure out why
-
    // }
 
    return (
