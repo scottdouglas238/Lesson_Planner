@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./components/login"
 import TeacherLanding from "./components/Teacherlanding"
-import lessonPlanForm from "./components/form";
+import LessonPlanForm from "./components/handleinputform";
 import AdminLanding from "./components/Adminlanding";
 import viewLessonPlan from "./components/viewLessonPlan";
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Route exact path="/" component={Login} />
         <Route exact path="/landingPage" component={TeacherLanding} />
-        <Route exact path="/newLessonPlan" component={lessonPlanForm} />
+        <Route exact path="/newLessonPlan" component={LessonPlanForm} />
         <Route exact path="/landingPageAdmin" component={AdminLanding} />
         <Route exact path="/viewLessonPlan" component={viewLessonPlan} />
       </div>
