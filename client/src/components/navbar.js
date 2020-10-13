@@ -5,7 +5,7 @@ function Navbar() {
     <nav class="navbar bk">
       <div class="container">
         <div class="navbar-brand">
-          <p class="navbar-item has-text-white is-size-3" href="../index.html">
+          <p class="navbar-item has-text-white is-size-3 has-text-weight-bold">
             L-Plan
           </p>
         </div>
