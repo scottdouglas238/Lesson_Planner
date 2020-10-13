@@ -4,7 +4,7 @@ import "./App.css";
 import Login from "./components/login"
 import TeacherLanding from "./components/Teacherlanding"
 import lessonPlanForm from "./components/form";
-
+import AdminLanding from "./components/Adminlanding";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route exact path="/" component={Login} />
         <Route exact path="/landingPage" component={TeacherLanding} />
         <Route exact path="/newLessonPlan" component={lessonPlanForm} />
+        <Route exact path="/landingPageAdmin" component={AdminLanding} />
       </div>
     </Router>
   );
