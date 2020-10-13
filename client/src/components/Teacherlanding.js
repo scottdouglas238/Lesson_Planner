@@ -1,9 +1,11 @@
 import React, { Component, useState } from "react";
 import "../css/landingpagestyle.css";
+import Navbar from "./navbar.js";
+import LessonPlanButton from "./newLessonPlanbutton"
 function TeacherLanding() {
   return (
     <>
-       <nav class="navbar bk">
+       {/* <nav class="navbar bk">
         <div class="container">
             <div class="navbar-brand">
                 <p class="navbar-item has-text-white is-size-3" href="../index.html">
@@ -12,12 +14,11 @@ function TeacherLanding() {
             </div>
 
         </div>
-    </nav>
+    </nav> */}
+      <Navbar/>
     {/* <!-- END NAV --> */}
     <div class="container">
-        <button class="mt-4 button is-success is-inverted is-outlined is-inline-flex has-text-weight-bold" href="admin.html">
-                Create new lesson plan
-                        </button>
+        <LessonPlanButton/>
         <div class="columns">
             <div class="column is-12">
                 <section class="info-tiles pt-4">
