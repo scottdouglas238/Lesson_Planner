@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
  import API from "../utils/API"
+ import Navbar from "./navbar"
 
 function lessonPlanForm() {
     const [formObject, setFormObject] = useState({})
@@ -13,11 +14,22 @@ function lessonPlanForm() {
         event.preventDefault();
         if (formObject.title && formObject.author) {
           API.saveLesson({
-            title: formObject.title,
-            author: formObject.author,
-            synopsis: formObject.synopsis
+            teacherName: formObject.teacherName,
+            lessonName: formObject.lessonName,
+            department: formObject.department,
+            gradeLevel: formObject.gradeLevel,
+            concepts: formObject.concepts,
+            standards: formObject.standards,
+            skills: formObject.skills,
+            objectives: formObject.objectives,
+            materials: formObject.materials,
+            goal: formObject.goal,
+            openingActivity: formObject.openingActivity,
+            activity: formObject.activity,
+            assessment: formObject.assessment,
+            closingActivity: formObject.closingActivity
           })
-            .then(res => loadBooks()) 
+            .then(window.location.href = "/landingpage") 
             // ^ make this a redirect back to the teacher landing page
             .catch(err => console.log(err));
         }
@@ -69,7 +81,9 @@ function lessonPlanForm() {
                                             <option>English</option>
                                             <option>Science</option>
                                             <option>Philosophy</option>
-                                            <option>Spanish</option>
+                                            <option>Foreign Language</option>
+                                            <option>Visual and Performing Arts</option>
+                                            <option>Social Studies</option>
                                         </select>
                                     </div>
                                 </div>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./components/login"
 import TeacherLanding from "./components/Teacherlanding"
-import lessonPlanForm from "./components/form";
+import lessonPlanForm from "./components/handleinputform";
 import AdminLanding from "./components/Adminlanding";
 
 function App() {
