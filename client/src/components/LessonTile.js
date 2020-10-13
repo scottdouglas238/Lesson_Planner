@@ -2,7 +2,7 @@ import React from "react";
 import "../css/landingpagestyle.css";
 
 
-function LessonTile() {
+function LessonTile({ children }) {
   return (
     // <div class="tile is-parent test">
     //   <article class="tile is-child box lesson">
@@ -18,9 +18,7 @@ function LessonTile() {
         <div class="card-content">
           <div class="content">
             <li>Course</li>
-            <li>Concepts</li>
-            <li>Goal</li>
-          </div>
+            <li>Grade level</li>          </div>
         </div>
         <footer class="card-footer">
           <a href="#" class="card-footer-item">
