@@ -5,7 +5,7 @@ import Login from "./components/login"
 import TeacherLanding from "./components/Teacherlanding"
 import lessonPlanForm from "./components/form";
 import AdminLanding from "./components/Adminlanding";
-
+import viewLessonPlan from "./components/viewLessonPlan";
 function App() {
   return (
     <Router>
@@ -14,6 +14,7 @@ function App() {
         <Route exact path="/landingPage" component={TeacherLanding} />
         <Route exact path="/newLessonPlan" component={lessonPlanForm} />
         <Route exact path="/landingPageAdmin" component={AdminLanding} />
+        <Route exact path="/viewLessonPlan" component={viewLessonPlan} />
       </div>
     </Router>
   );
