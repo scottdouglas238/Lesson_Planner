@@ -56,7 +56,7 @@ function lessonPlanForm() {
       <form onSubmit>
         <Navbar />
 
-        <div class="container has-text-left">
+        <div class="container">
           <div class="columns">
             <div class="column is-12">
               <div class="field">
