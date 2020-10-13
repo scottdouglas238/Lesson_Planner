@@ -12,7 +12,7 @@ function lessonPlanForm() {
 
       function handleFormSubmit(event) {
         event.preventDefault();
-        if (formObject.title && formObject.author) {
+        if (formObject.teacherName && formObject.lessonName) {
           API.saveLesson({
             teacherName: formObject.teacherName,
             lessonName: formObject.lessonName,
