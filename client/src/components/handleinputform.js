@@ -2,7 +2,7 @@ import React, { useState } from "react";
  import API from "../utils/API"
  import Navbar from "./navbar"
 
-function lessonPlanForm() {
+function LessonPlanForm() {
     const [formObject, setFormObject] = useState({})
 
     function handleInputChange(event) {
@@ -243,4 +243,4 @@ function lessonPlanForm() {
     );
 }
 
-export default lessonPlanForm;
+export default LessonPlanForm;
