@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin - Free Bulma template</title>
+    <title>Teacher - Logged in</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
@@ -19,295 +19,117 @@
 <body>
 
     <!-- START NAV -->
-    <!-- <nav class="navbar is-white">
+    <nav class="navbar bk">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item brand-text" href="../index.html">
-         L-Plan
-        </a>
-                <div class="navbar-burger burger" data-target="navMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <p class="navbar-item has-text-white is-size-3" href="../index.html">
+                    L-Plan
+                </p>
             </div>
-            <div id="navMenu" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="admin.html">
-            Home
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Orders
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Payments
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Exceptions
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Reports
-          </a>
-                </div>
 
-            </div>
         </div>
-    </nav> -->
+    </nav>
     <!-- END NAV -->
     <div class="container">
+        <button class="mt-4 button is-success is-inverted is-outlined is-inline-flex has-text-weight-bold" href="admin.html">
+                Create new lesson plan
+                        </button>
         <div class="columns">
-            <!-- <div class="column is-3 ">
-                <aside class="menu is-hidden-mobile">
-                    <p class="menu-label">
-                        General
-                    </p>
-                    <ul class="menu-list">
-                        <li><a class="is-active">Dashboard</a></li>
-                        <li><a>Customers</a></li>
-                        <li><a>Other</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        Administration
-                    </p>
-                    <ul class="menu-list">
-                        <li><a>Team Settings</a></li>
-                        <li>
-                            <a>Manage Your Team</a>
-                            <ul>
-                                <li><a>Members</a></li>
-                                <li><a>Plugins</a></li>
-                                <li><a>Add a member</a></li>
-                                <li><a>Remove a member</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Invitations</a></li>
-                        <li><a>Cloud Storage Environment Settings</a></li>
-                        <li><a>Authentication</a></li>
-                        <li><a>Payments</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        Transactions
-                    </p>
-                    <ul class="menu-list">
-                        <li><a>Payments</a></li>
-                        <li><a>Transfers</a></li>
-                        <li><a>Balance</a></li>
-                        <li><a>Reports</a></li>
-                    </ul>
-                </aside>
-            </div> -->
             <div class="column is-12">
-                <!-- <nav class="breadcrumb" aria-label="breadcrumbs">
-                    <ul>
-                        <li><a href="../">Bulma</a></li>
-                        <li><a href="../">Templates</a></li>
-                        <li><a href="../">Examples</a></li>
-                        <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
-                    </ul>
-                </nav> -->
-                <section class="hero is-dark is-bold welcome is-small">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
-                                Hello, Reginald!
-                            </h1>
-                            <h2 class="subtitle">
-                                I hope you are having a great day!
-                            </h2>
+                <section class="info-tiles pt-4">
+                    <!-- your lesson plans -->
+                    <div class="columns is-mobile">
+                        <div class="column is-one-quarter is-size-4">
+                            <p class="plans">Your Lesson Plans</p>
                         </div>
-                    </div>
-                </section>
-                <section class="info-tiles pt-6">
-                    <div class="has-text-left is-size-4">
-                        <p class="plans ">Your Lesson Plans</p>
-                    </div>
-                    <div class="has-text-right is-size-5"> <a>See all</a>
+                        <div class="column is-one-quarter">
+
+                        </div>
+                        <div class="column is-one-quarter">
+
+                        </div>
+                        <div class="column is-one-quarter has-text-right is-size-5">
+                            <a>View all</a>
+                        </div>
+
                     </div>
 
+                    <!-- your lesson plans -->
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
-                            <article class="tile is-child box">
+                            <article class="tile is-child box lesson test">
                                 <p class="title">Exponents</p>
                                 <p class="subtitle">Algebra</p>
                             </article>
                         </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
+                        <div class="tile is-parent ">
+                            <article class="tile is-child box lesson test2">
                                 <p class="title">Polynomials</p>
                                 <p class="subtitle">Algebra</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
-                            <article class="tile is-child box">
+                            <article class="tile is-child box lesson test3">
                                 <p class="title">Integers</p>
                                 <p class="subtitle">Pre-Algebra</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
-                            <article class="tile is-child box">
+                            <article class="tile is-child box lesson test4">
                                 <p class="title">Probability</p>
                                 <p class="subtitle">Pre-Algebra</p>
                             </article>
                         </div>
                     </div>
                 </section>
-                <!-- <div class="columns"> -->
-                <!-- beginning of event planner -->
-                <!-- <div class="column is-6">
-                        <div class="card events-card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    Events
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                                    <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                                </a>
-                            </header>
-                            <div class="card-table">
-                                <div class="content">
-                                    <table class="table is-fullwidth is-striped">
-                                        <tbody>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <footer class="card-footer">
-                                <a href="#" class="card-footer-item">View All</a>
-                            </footer>
-                        </div>
-                    </div> -->
-                <!-- end of event planner -->
+                <!-- your lesson plans -->
+
+                <!-- department lesson plans -->
                 <section class="info-tiles pt-6">
-                    <div class="has-text-left is-size-4">
-                        <p class="plans ">Department Lesson Plans</p>
+                    <div class="columns is-mobile">
+                        <div class="column is-one-quarter is-size-4">
+                            <p class="plans">Department Lesson Plans</p>
+                        </div>
+                        <div class="column is-one-quarter">
+
+                        </div>
+                        <div class="column is-one-quarter">
+
+                        </div>
+                        <div class="column is-one-quarter has-text-right is-size-5">
+                            <a>View all</a>
+                        </div>
+
                     </div>
-                    <div class="has-text-right is-size-5"> <a>See all</a>
-                    </div>
+
                     <div class="tile is-ancestor has-text-centered">
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
+                        <div class="tile is-parent test">
+                            <article class="tile is-child box lesson">
                                 <p class="title">Imaginary Numbers</p>
                                 <p class="subtitle">Pre-Calculus</p>
                             </article>
                         </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
+                        <div class="tile is-parent test2">
+                            <article class="tile is-child box lesson">
                                 <p class="title">Estimating Derivatives</p>
                                 <p class="subtitle">Calculus</p>
                             </article>
                         </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
+                        <div class="tile is-parent test3">
+                            <article class="tile is-child box lesson">
                                 <p class="title">Complex Numbers</p>
                                 <p class="subtitle">Pre-Calculus</p>
                             </article>
                         </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
+                        <div class="tile is-parent test4">
+                            <article class="tile is-child box lesson">
                                 <p class="title">Right Triangles</p>
                                 <p class="subtitle">Geometry</p>
                             </article>
                         </div>
                     </div>
                 </section>
-
-                <!-- <div class="column is-6">
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    Inventory Search
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                                    <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control has-icons-left has-icons-right">
-                                        <input class="input is-large" type="text" placeholder="">
-                                        <span class="icon is-medium is-left">
-                      <i class="fa fa-search"></i>
-                    </span>
-                                        <span class="icon is-medium is-right">
-                      <i class="fa fa-check"></i>
-                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    User Search
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                                    <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control has-icons-left has-icons-right">
-                                        <input class="input is-large" type="text" placeholder="">
-                                        <span class="icon is-medium is-left">
-                      <i class="fa fa-search"></i>
-                    </span>
-                                        <span class="icon is-medium is-right">
-                      <i class="fa fa-check"></i>
-                    </span>
-                                    </div>
-                                </div> -->
-                <!-- </div> -->
+                <!-- department lesson plans -->
             </div>
         </div>
     </div>
