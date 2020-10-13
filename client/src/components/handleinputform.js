@@ -39,7 +39,7 @@ function LessonPlanForm() {
     <>
       <form onSubmit>
         <Navbar />
-        <div className="container has-text-left">
+        <div className="container has-text-left test">
           <div className="columns">
             <div className="column is-12">
               <div className="field">
@@ -219,7 +219,7 @@ function LessonPlanForm() {
           </div>
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link" onclick={handleFormSubmit}>
+              <button className="button is-link" onClick={handleFormSubmit}>
                 Submit
               </button>
             </div>

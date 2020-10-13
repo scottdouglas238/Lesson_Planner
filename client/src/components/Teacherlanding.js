@@ -8,7 +8,7 @@ function TeacherLanding() {
     <>
       <Navbar />
       <div className="container has-text-left">
-        <div className="vertical">
+        <div className="">
           <LessonPlanButton />
         </div>
         <div class="columns">
