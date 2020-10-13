@@ -11,9 +11,6 @@ export default function viewAll() {
       <div class="column">
         <LessonPlanButton />
         <LessonTile />
-        <LessonTile />
-        <LessonTile />
-        <LessonTile />
       </div>
     </>
   );

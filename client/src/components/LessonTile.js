@@ -1,32 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../css/landingpagestyle.css";
+import { CardHeader, CardBody, CardFooter } from "./card";
+import API from "../utils/API";
 
 
-function LessonTile({ children }) {
+function LessonTile(props) {
+  const [lessons, setLessons] = useState([]);
+
+  useEffect(() => {
+    loadLessons();
+  }, []);
+
+  function loadLessons() {
+    API.getLessons()
+      .then((res) => setLessons(res.data))
+      .catch((err) => console.log(err));
+  }
+
   return (
-    // <div class="tile is-parent test">
-    //   <article class="tile is-child box lesson">
-    //     <p class="title">Imaginary Numbers</p>
-    //     <p class="subtitle">Pre-Calculus</p>
-    //   </article>
-    // </div>
     <div class="column test">
       <div class="card lesson">
-        <header class="card-header">
-          <p class="card-header-title">Lesson Plan Name Goes Here</p>
-        </header>
-        <div class="card-content">
-          <div class="content">
-            <li>Course</li>
-            <li>Grade level</li>          </div>
-        </div>
-        <footer class="card-footer">
-          <a href="#" class="card-footer-item">
-            View
-          </a>
-        </footer>
+            {lessons.map(lesson => (
+          
+          
+          <>
+                    <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
+                <CardBody>{lesson.department}</CardBody>
+                    <CardFooter>{lesson.course}</CardFooter>
+                              </>
+        
+        
+        ))}
       </div>
     </div>
   );
 }
 export default LessonTile;
+  
+
+
+
