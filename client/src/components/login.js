@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import axios from "axios";
+import "../css/styles.css";
+
 function Login(){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
