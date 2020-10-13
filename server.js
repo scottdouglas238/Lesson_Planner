@@ -2,9 +2,7 @@ const express = require("express");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
-
 const passport = require("./passport/setup");
-const auth = require("./routes/auth");
 
 const app = express();
 const port = 5000;
@@ -30,9 +28,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-//Routes
-app.use("/api/auth", auth);
-app.get("/", (req, res)=> res.send("Hello World Good Morning SunShine!"));
+// Requiring our routes
+require("./routes/api-routes.js")(app);
 
 app.listen(port, ()=> console.log(`Backend listening Listening On Port ${port}!`));
 
