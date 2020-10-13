@@ -1,6 +1,7 @@
 html,
 body {
     background-color: #7e796f;
+    min-height: 100vh;
 }
 
 .plans {
@@ -14,6 +15,10 @@ body {
 
 .lesson {
     background-color: #c9c0ae;
+}
+
+.vertical {
+    margin-top: 10px;
 }
 
 

@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import Navbar from "./navbar.js";
+// import API from "../../utils/API"
 
 //import { useStoreContext } from "../../utils/GlobalState";
 //import { ADD_POST, LOADING } from "../../utils/actions";
-import API from "../../utils/API"
 function lessonPlanForm() {
   //   const teacherNameRef = useRef();
   //   const lessonNameRef = useRef();
@@ -56,7 +56,7 @@ function lessonPlanForm() {
       <form onSubmit>
         <Navbar />
 
-        <div class="container">
+        <div class="container has-text-left">
           <div class="columns">
             <div class="column is-12">
               <div class="field">
