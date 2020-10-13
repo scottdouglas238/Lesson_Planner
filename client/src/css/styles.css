@@ -114,6 +114,11 @@ body {
 
 /* Animation triggers */
 
+.fields {
+    animation-name: slideUp;
+    animation-delay: 150ms
+}
+
 .name {
     animation-name: slideDown;
     color: blanchedalmond;
