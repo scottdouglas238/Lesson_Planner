@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const chalk = require("chalk");
+const {red, green, blue} = chalk;
+
 
 router.post("/register_login", (req, res, next) => {
     passport.authenticate("local", function (err, user, info) {
@@ -14,6 +17,7 @@ router.post("/register_login", (req, res, next) => {
             if (err) {
                 return res.status(400).json({ errors: err });
             }
+            console.log(blue("USER LOGGED IN"));
             return res.status(200).json({ success: `logged in ${user.id}` });
         });
     })(req, res, next);
