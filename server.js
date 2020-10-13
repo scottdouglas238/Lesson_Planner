@@ -6,7 +6,7 @@ const passport = require("./passport/setup");
 
 const app = express();
 const port = 5000;
-const MONGO_URI = "mongodb://127.0.0.1:27017/tutorial_social_login";
+const MONGO_URI = "mongodb://127.0.0.1:27017/lessons";
 
 mongoose
     .connect(MONGO_URI, { useNewUrlParser: true})
