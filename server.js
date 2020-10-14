@@ -3,7 +3,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
 const passport = require("./passport/setup");
-
+const path = require("path");
 const app = express();
 const port = 5000;
 const MONGO_URI = "mongodb://127.0.0.1:27017/lessons";
@@ -33,4 +33,9 @@ require("./routes/api-routes.js")(app);
 
 app.listen(port, ()=> console.log(`Backend listening Listening On Port ${port}!`));
 
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "/client/build/index.html"));
+  });
+}
