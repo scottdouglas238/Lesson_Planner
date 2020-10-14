@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-newLessonPlan: function(lessonData) {
+saveLesson: function(lessonData) {
     return axios.post("/api/lessons", lessonData);
 }
 

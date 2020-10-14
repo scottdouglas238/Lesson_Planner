@@ -4,7 +4,6 @@ const passport = require("passport");
 const chalk = require("chalk");
 const {red, green, blue} = chalk;
 
-
 router.post("/register_login", (req, res, next) => {
     passport.authenticate("local", function (err, user, info) {
         if (err) {

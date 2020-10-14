@@ -221,7 +221,7 @@ function LessonPlanForm() {
             </div>
             <div className="field is-grouped">
               <div className="control">
-                <button className="button is-link" onclick={handleFormSubmit}>
+                <button className="button is-link" onClick={handleFormSubmit}>
                   Submit
                 </button>
               </div>
