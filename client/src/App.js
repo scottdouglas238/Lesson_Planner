@@ -6,6 +6,7 @@ import TeacherLanding from "./components/Teacherlanding"
 import LessonPlanForm from "./components/handleinputform";
 import AdminLanding from "./components/Adminlanding";
 import viewLessonPlan from "./components/viewLessonPlan";
+import viewAll from "./components/viewAll";
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/newLessonPlan" component={LessonPlanForm} />
         <Route exact path="/landingPageAdmin" component={AdminLanding} />
         <Route exact path="/viewLessonPlan" component={viewLessonPlan} />
+        <Route exact path="/viewAll" component={viewAll} />
       </div>
     </Router>
   );

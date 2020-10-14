@@ -8,7 +8,7 @@ function TeacherLanding() {
     <>
       <Navbar />
       <div className="container has-text-left">
-        <div className="vertical">
+        <div className="">
           <LessonPlanButton />
         </div>
         <div class="columns">
@@ -27,10 +27,9 @@ function TeacherLanding() {
               </div>
               {/* <!-- your lesson plans --> */}
               <div class="tile is-ancestor has-text-centered">
+           
                 <LessonTile />
-                <LessonTile />
-                <LessonTile />
-                <LessonTile />
+            
               </div>
             </section>
             {/* <!-- your lesson plans -->
@@ -48,9 +47,7 @@ function TeacherLanding() {
               </div>
               <div class="tile is-ancestor has-text-centered">
                 <LessonTile />
-                <LessonTile />
-                <LessonTile />
-                <LessonTile />
+            
               </div>
             </section>
             {/* <!-- department lesson plans --> */}
