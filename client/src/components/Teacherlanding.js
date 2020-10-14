@@ -1,72 +1,26 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "../css/landingpagestyle.css";
 import Navbar from "./navbar.js";
 import LessonPlanButton from "./newLessonPlanbutton"
 import LessonTile from "./LessonTile"
+import "../css/style.scss";
 function TeacherLanding() {
   return (
     <>
-      <Navbar/>
-    <div class="container">
-        <LessonPlanButton/>
-        <div class="columns">
-            <div class="column is-12">
-                <section class="info-tiles pt-4">
-                    {/* <!-- your lesson plans --> */}
-                    <div class="columns is-mobile">
-                        <div class="column is-one-quarter is-size-4">
-                            <p class="plans">Your Lesson Plans</p>
-                        </div>
-                        <div class="column is-one-quarter">
-                        </div>
-                        <div class="column is-one-quarter">
-                        </div>
-                        <div class="column is-one-quarter has-text-right is-size-5">
-                            <a>View all</a>
-                        </div>
-                    </div>
-                    {/* <!-- your lesson plans --> */}
-                    <div class="tile is-ancestor has-text-centered">
-                        <LessonTile/>
-                        <LessonTile/>
-                        <LessonTile/>
-                        <LessonTile/>
-                    </div>
-                </section>
-                {/* <!-- your lesson plans -->
-                <!-- department lesson plans --> */}
-                <section class="info-tiles pt-6">
-                    <div class="columns is-mobile">
-                        <div class="column is-one-quarter is-size-4">
-                            <p class="plans">Department Lesson Plans</p>
-                        </div>
-                        <div class="column is-one-quarter">
-                        </div>
-                        <div class="column is-one-quarter">
-                        </div>
-                        <div class="column is-one-quarter has-text-right is-size-5">
-                            <a>View all</a>
-                        </div>
-                    </div>
-                    <div class="tile is-ancestor has-text-centered">
-                        <LessonTile/>
-                        <LessonTile/>
-                        <LessonTile/>
-                        <LessonTile/>
-                    </div>
-                </section>
-                {/* <!-- department lesson plans --> */}
-            </div>
+      <Navbar />
+      <LessonPlanButton />
+      <div className="section">
+        <div className="container is-fluid">
+          <div className="row">
+            <LessonTile />
+          </div>
         </div>
-    </div>
+      </div>
     </>
   );
 }
 export default TeacherLanding;
     
-
-
-
 
                         
 

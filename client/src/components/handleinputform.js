@@ -1,62 +1,45 @@
-import React, { useRef } from "react";
-import Navbar from "./navbar.js";
-// import API from "../../utils/API"
+import React, { useState } from "react";
+import API from "../utils/API";
+import Navbar from "./navbar";
 
-//import { useStoreContext } from "../../utils/GlobalState";
-//import { ADD_POST, LOADING } from "../../utils/actions";
-function lessonPlanForm() {
-  //   const teacherNameRef = useRef();
-  //   const lessonNameRef = useRef();
-  //   const departmentRef = useRef();
-  //   const courseRef = useRef();
-  //   const gradeLevelRef = useRef();
-  //   const conceptsRef = useRef();
-  //   const standardsRef = useRef();
-  //   const skillsRef = useRef();
-  //   const objectivesRef = useRef();
-  //   const materialsRef = useRef();
-  //   const goalRef = useRef();
-  //   const openingRef = useRef();
-  //   const activityRef = useRef();
-  //   const assessmentRef = useRef();
-  //   const closingRef = useRef();
+function LessonPlanForm() {
+  const [formObject, setFormObject] = useState({});
 
-  //const [state, dispatch] = useStoreContext();
-  //const handleSubmit = e => {
-  //e.preventDefault();
-  //dispatch({ type: LOADING });
-  //API.savePost({
-  //teacherName: teacherNameRef.current.value,
-  //lessonNameName: lessonNameRef.current.value,
-  //department: department.current.value,
-  //course: classNameRef.current.value,
-  //gradeLevel: gradeLevelRef.current.value,
-  //concepts: conceptsRef.current.value,
-  //standards: standardsRef.current.value,
-  //skills: skillsRef.current.value,
-  //objectives: objectivesRef.current.value,
-  //materials: materialsRef.current.value,
-  //goal: goalRef.current.value,
-  //openingActivity: openingRef.current.value,
-  //activity: activityRef.current.value,
-  //assessment: assessmentRef.current.value,
-  //closingActivity: closingRef.current.value,
-  //})
-  //.then(result => {
-  //dispatchEvent({
-  //type: ADD_POST,
-  //post: result.data
-  //});
-  // })
-  //.catch(err => console.log(err));
-  //look at lines 28 and 29 of example and figure out why
-  // }
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormObject({ ...formObject, [name]: value });
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (formObject.teacherName && formObject.lessonName) {
+      API.saveLesson({
+        teacherName: formObject.teacherName,
+        lessonName: formObject.lessonName,
+        department: formObject.department,
+        gradeLevel: formObject.gradeLevel,
+        concepts: formObject.concepts,
+        standards: formObject.standards,
+        skills: formObject.skills,
+        objectives: formObject.objectives,
+        materials: formObject.materials,
+        goal: formObject.goal,
+        openingActivity: formObject.openingActivity,
+        activity: formObject.activity,
+        assessment: formObject.assessment,
+        closingActivity: formObject.closingActivity,
+      })
+        .then((window.location.href = "/landingpage"))
+        // ^ make this a redirect back to the teacher landing page
+        .catch((err) => console.log(err));
+    }
+  }
+
   return (
     <>
-      <form onSubmit>
+      <form>
         <Navbar />
-
-        <div className="container">
+        <div className="container has-text-left test">
           <div className="columns">
             <div className="column is-12">
               <div className="field">
@@ -65,8 +48,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="teacherName"
                     placeholder="Text input"
-                    // ref={teacherNameRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -76,8 +60,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="lessonName"
                     placeholder="Text input"
-                    // ref={lessonNameRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -85,9 +70,7 @@ function lessonPlanForm() {
                 <label className="label">Department</label>
                 <div className="control">
                   <div className="select">
-                    <select
-                    //   ref={departmentRef}
-                    >
+                    <select name="department" onChange={handleInputChange}>
                       <option>Math</option>
                       <option>English</option>
                       <option>Science</option>
@@ -104,8 +87,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="course"
                     placeholder="Text input"
-                    // ref={courseRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -115,8 +99,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="gradeLevel"
                     placeholder="Text input"
-                    // ref={gradeLevelRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -126,8 +111,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="concepts"
                     placeholder="Text input"
-                    // ref={conceptsRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -137,8 +123,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="standards"
                     placeholder="Text input"
-                    // ref={standardsRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -148,8 +135,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="skills"
                     placeholder="Text input"
-                    // ref={skillsRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -159,8 +147,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="objectives"
                     placeholder="Text input"
-                    // ref={objectivesRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -170,8 +159,9 @@ function lessonPlanForm() {
                   <input
                     className="input"
                     type="text"
+                    name="materials"
                     placeholder="Text input"
-                    // ref={materialsRef}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -181,8 +171,8 @@ function lessonPlanForm() {
                   <textarea
                     className="textarea"
                     placeholder="Textarea"
-                    //   ref={goalRef}
-                  ></textarea>
+                    name="goal"
+                    onChange={handleInputChange}></textarea>
                 </div>
               </div>
               <div className="field">
@@ -191,8 +181,8 @@ function lessonPlanForm() {
                   <textarea
                     className="textarea"
                     placeholder="Textarea"
-                    //   ref={openingRef}
-                  ></textarea>
+                    name="openingActivity"
+                    onChange={handleInputChange}></textarea>
                 </div>
               </div>
               <div className="field">
@@ -201,8 +191,8 @@ function lessonPlanForm() {
                   <textarea
                     className="textarea"
                     placeholder="Textarea"
-                    //   ref={activityRef}
-                  ></textarea>
+                    name="activity"
+                    onChange={handleInputChange}></textarea>
                 </div>
               </div>
               <div className="field">
@@ -211,8 +201,8 @@ function lessonPlanForm() {
                   <textarea
                     className="textarea"
                     placeholder="Textarea"
-                    //   ref={assessmentRef}
-                  ></textarea>
+                    name="assessment"
+                    onChange={handleInputChange}></textarea>
                 </div>
               </div>
               <div className="field">
@@ -221,15 +211,17 @@ function lessonPlanForm() {
                   <textarea
                     className="textarea"
                     placeholder="Textarea"
-                    //   ref={closingRef}
-                  ></textarea>
+                    name="closingActivity"
+                    onChange={handleInputChange}></textarea>
                 </div>
               </div>
             </div>
           </div>
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link">Submit</button>
+              <button className="button is-link" onClick={handleFormSubmit}>
+                Submit
+              </button>
             </div>
             <div className="control">
               <button className="button is-link is-light">Cancel</button>
@@ -241,4 +233,4 @@ function lessonPlanForm() {
   );
 }
 
-export default lessonPlanForm;
+export default LessonPlanForm;

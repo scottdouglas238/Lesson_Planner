@@ -1,6 +1,5 @@
 html,
 body {
-    overflow-y: hidden;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     background-color: #2b3c1e;
@@ -113,6 +112,11 @@ body {
 
 
 /* Animation triggers */
+
+.fields {
+    animation-name: slideUp;
+    animation-delay: 150ms
+}
 
 .name {
     animation-name: slideDown;
