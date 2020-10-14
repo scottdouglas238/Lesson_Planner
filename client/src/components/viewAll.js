@@ -8,12 +8,12 @@ export default function viewAll() {
   return (
     <>
       <Navbar />
-
         <LessonPlanButton />
-      
           <LessonTile />
-        
-    
     </>
   );
 }
+
+      
+        
+    

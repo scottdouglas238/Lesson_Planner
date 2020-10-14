@@ -16,13 +16,6 @@ function TeacherLanding() {
           </div>
         </div>
       </div>
-     
-        
-
-      {/* <!-- your lesson plans -->
-                <!-- department lesson plans --> */}
-
-      {/* <!-- department lesson plans --> */}
     </>
   );
 }
