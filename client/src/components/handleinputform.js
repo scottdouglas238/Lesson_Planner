@@ -37,7 +37,7 @@ function LessonPlanForm() {
 
   return (
     <>
-      <form onSubmit>
+      <form>
         <Navbar />
         <div className="container has-text-left test">
           <div className="columns">
@@ -80,7 +80,7 @@ function LessonPlanForm() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="field">
                 <label className="label">Course</label>
                 <div className="control">

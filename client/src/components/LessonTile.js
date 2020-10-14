@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../css/landingpagestyle.css";
-import { CardHeader, CardBody, CardFooter } from "./card";
+import { CardHeader } from "./card";
 import API from "../utils/API";
 import "../css/style.scss";
+import { Link } from "react-router-dom";
 
 
 function LessonTile(props) {
@@ -19,14 +20,14 @@ function LessonTile(props) {
   }
   console.log(lessons);
   return (
-    <div class="cards">
+    <div className="cards">
       {lessons.map((lesson) => (
-        <div class="tile is-parent">
+        <div key={lesson._id} className="tile is-parent">
           <>
-            <div class="tile is-child card lesson">
+            <div className="tile is-child card lesson">
               <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
-              <div class="card-content">
-                <div class="content">
+              <div className="card-content">
+                <div className="content">
                   <p>
                     <strong>Teacher :</strong> {lesson.teacherName}
                   </p>
@@ -35,14 +36,16 @@ function LessonTile(props) {
                   </p>
                 </div>
               </div>
-              <CardFooter>{lesson.course}View</CardFooter>
+              <Link to={"/lesson/" + lesson._id}>
+                View
+              </Link>
             </div>
           </>
         </div>
       ))}
     </div>
   );
- }
+}
  export default LessonTile;
    
    

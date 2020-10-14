@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "../css/landingpagestyle.css";
 import Navbar from "./navbar.js";
 import LessonPlanButton from "./newLessonPlanbutton";

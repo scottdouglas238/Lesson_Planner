@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "../css/landingpagestyle.css";
 import Navbar from "./navbar.js";
 import LessonPlanButton from "./newLessonPlanbutton"
@@ -9,9 +9,9 @@ function TeacherLanding() {
     <>
       <Navbar />
       <LessonPlanButton />
-      <div class="section">
-        <div class="container is-fluid">
-          <div class="row">
+      <div className="section">
+        <div className="container is-fluid">
+          <div className="row">
             <LessonTile />
           </div>
         </div>
