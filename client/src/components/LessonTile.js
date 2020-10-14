@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/landingpagestyle.css";
 import { CardHeader, CardBody, CardFooter } from "./card";
 import API from "../utils/API";
+import "../css/style.scss";
 
 
 function LessonTile(props) {
@@ -18,12 +19,12 @@ function LessonTile(props) {
   }
   console.log(lessons);
   return (
-    <div class="tile is-ancestor">
-        {lessons.map((lesson) => (
-      <div class="tile is-parent">
+    <div class="cards">
+      {lessons.map((lesson) => (
+        <div class="tile is-parent">
           <>
             <div class="tile is-child card lesson">
-                      <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
+              <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
               <div class="card-content">
                 <div class="content">
                   <p>
@@ -34,11 +35,11 @@ function LessonTile(props) {
                   </p>
                 </div>
               </div>
-            <CardFooter>{lesson.course}View</CardFooter>
+              <CardFooter>{lesson.course}View</CardFooter>
             </div>
           </>
-      </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
  }
