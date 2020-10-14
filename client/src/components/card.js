@@ -3,17 +3,17 @@ import "../css/landingpagestyle.css";
 
 export function CardHeader({ children }) {
   return (
-    <header class="card-header bk ">
-      <p class="card-header-title has-text-white">{children}</p>
+    <header className="card-header bk ">
+      <p className="card-header-title has-text-white">{children}</p>
     </header>
   );
 }
 
 // export function CardBody({ children }) {
 //   return (
-//     <div class="column">
-//       <div class="card-content">
-//         <div class="content">
+//     <div className="column">
+//       <div className="card-content">
+//         <div className="content">
 //           <li>{children}</li>
 //           <li>{children}</li>
 //         </div>
@@ -27,5 +27,5 @@ export function CardHeader({ children }) {
 // }
 
 export function CardFooter({ children }) {
-  return <footer class="card-footer-item">{children}</footer>;
+  return <footer className="card-footer-item">{children}</footer>;
 }

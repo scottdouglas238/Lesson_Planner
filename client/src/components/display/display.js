@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+
 import Navbar from "../navbar";
 import API from "../../utils/API";
 import Label from "./label"
@@ -7,13 +7,14 @@ import Box from "./box"
 
 function Display(props) {
   const [lesson, setLesson] = useState({});
+  const id = props.match.params.id;
 
   useEffect(() => {
-    getLesson();
-  }, []);
+    getLesson(id);
+  });
 
-  function getLesson() {
-    API.getLesson()
+  function getLesson(id) {
+    API.getLesson(id)
       .then((res) => setLesson(res.data))
       .catch((err) => console.log(err));
   }

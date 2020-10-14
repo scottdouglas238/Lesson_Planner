@@ -1,11 +1,11 @@
 import React from "react";
-import Box from "./box";
+
 
  function Label({ children }){
-     return(
-         <>
-        <label class="label">{children}</label>
-        </>
-     )
+     return (
+       <>
+         <label className="label">{children}</label>
+       </>
+     );
 
 } export default Label;

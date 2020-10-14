@@ -29,7 +29,7 @@ function lessonPlanForm() {
   //teacherName: teacherNameRef.current.value,
   //lessonNameName: lessonNameRef.current.value,
   //department: department.current.value,
-  //course: classRef.current.value,
+  //course: classNameRef.current.value,
   //gradeLevel: gradeLevelRef.current.value,
   //concepts: conceptsRef.current.value,
   //standards: standardsRef.current.value,
@@ -56,35 +56,35 @@ function lessonPlanForm() {
       <form onSubmit>
         <Navbar />
 
-        <div class="container">
-          <div class="columns">
-            <div class="column is-12">
-              <div class="field">
-                <label class="label">Teacher Name</label>
-                <div class="control pt-8">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-12">
+              <div className="field">
+                <label className="label">Teacher Name</label>
+                <div className="control pt-8">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={teacherNameRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Lesson Name</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Lesson Name</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={lessonNameRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Department</label>
-                <div class="control">
-                  <div class="select">
+              <div className="field">
+                <label className="label">Department</label>
+                <div className="control">
+                  <div className="select">
                     <select
                     //   ref={departmentRef}
                     >
@@ -98,128 +98,128 @@ function lessonPlanForm() {
                 </div>
               </div>
 
-              <div class="field">
-                <label class="label">Course</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Course</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={courseRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Grade Level</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Grade Level</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={gradeLevelRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Concepts</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Concepts</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={conceptsRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Standards</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Standards</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={standardsRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Skills</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Skills</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={skillsRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Objectives</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Objectives</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={objectivesRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Materials</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Materials</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     placeholder="Text input"
                     // ref={materialsRef}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Goal</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Goal</label>
+                <div className="control">
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     placeholder="Textarea"
                     //   ref={goalRef}
                   ></textarea>
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Opening Activity</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Opening Activity</label>
+                <div className="control">
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     placeholder="Textarea"
                     //   ref={openingRef}
                   ></textarea>
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Activity</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Activity</label>
+                <div className="control">
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     placeholder="Textarea"
                     //   ref={activityRef}
                   ></textarea>
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Assessment</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Assessment</label>
+                <div className="control">
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     placeholder="Textarea"
                     //   ref={assessmentRef}
                   ></textarea>
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Closing Activity</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Closing Activity</label>
+                <div className="control">
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     placeholder="Textarea"
                     //   ref={closingRef}
                   ></textarea>
@@ -227,12 +227,12 @@ function lessonPlanForm() {
               </div>
             </div>
           </div>
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Submit</button>
+          <div className="field is-grouped">
+            <div className="control">
+              <button className="button is-link">Submit</button>
             </div>
-            <div class="control">
-              <button class="button is-link is-light">Cancel</button>
+            <div className="control">
+              <button className="button is-link is-light">Cancel</button>
             </div>
           </div>
         </div>
