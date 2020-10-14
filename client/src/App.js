@@ -10,11 +10,12 @@ import viewAll from "./components/viewAll";
 import { useStoreContext } from "./utils/GlobalState"
 
 function App() {
+  const [state] = useStoreContext();
   return (
     <Router>
       <div className="App">
         <Switch>
-        <Route exact path="/" component={Login} />
+        {state.auth || <Route exact path="/" component={Login} />}
         <Route exact path="/landingPage" component={TeacherLanding} />
         <Route exact path="/newLessonPlan" component={LessonPlanForm} />
         <Route exact path="/landingPageAdmin" component={AdminLanding} />

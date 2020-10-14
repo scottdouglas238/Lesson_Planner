@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { LOGIN } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
@@ -8,32 +8,39 @@ import "../css/styles.css";
 
 
 function Login(){
-  // const history = useHistory();
-  // const [state, dispatch] = useStoreContext();
+  const history = useHistory();
+  const [state, dispatch] = useStoreContext();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
 
-  const onSubmit = e => {
+  function login(e){
     e.preventDefault()
+    fetch("/api/login",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+      }).then((res)=> res.json())
+      .then((data)=> {
+        dispatch({
+          type:LOGIN,
+          payload: data.message,
+        });
+        history.push("/api/landingpage");
+      }).catch((err)=> console.log(err));
+    }
 
-    axios.post("/api/auth/register_login")
-    .then(res => {
-      console.log(res);
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
-
-
-  
     return (
       <>
         <div className="tile is-8 is-parent " id="right"></div>
         <div className="tile is-5 is-parent" id="left">
-          <form onSubmit={onSubmit}>
+          <form onSubmit ={login} >
             <div className="tile is-child">
               <p className="title is-2 name">L-plan</p>
               <hr className="hr" />
@@ -65,11 +72,8 @@ function Login(){
                       <i className="fas fa-lock" />
                     </span>
                   </p>
-                  <button
-                    className="button is-success is-inverted is-outlined"
-                    onClick={(event) =>
-                      (window.location.href = "/landingpage")
-                    }>
+                  <button type="submit"
+                    className="button is-success is-inverted is-outlined">
                     Submit
                   </button>
                 </div>
@@ -88,7 +92,14 @@ function Login(){
         </div>
       </>
     );
-  
-
-}
+  }
 export default Login;
+
+
+    // axios.post("/api/signup")
+    // .then(res => {
+    //   console.log(res);
+    // })
+    // .catch(err => {
+    //   console.log(err);
+    // })
