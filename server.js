@@ -9,7 +9,7 @@ const port = 5000;
 const MONGO_URI = "mongodb://127.0.0.1:27017/lessons";
 
 mongoose
-  .connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/lessons", {
+  .connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/lessons", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
