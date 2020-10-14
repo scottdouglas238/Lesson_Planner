@@ -3,6 +3,7 @@ import img from "../media/58a1cef7e33a543010fac265.png";
 import axios from "axios";
 import "../css/styles.css";
 
+
 function Login(){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,11 +12,7 @@ function Login(){
   const onSubmit = e => {
     e.preventDefault()
 
-    const userData = {
-      email,
-      password
-    };
-    axios.post("/api/auth/register_login", userData)
+    axios.post("/api/auth/register_login")
     .then(res => {
       console.log(res);
     })
