@@ -1,6 +1,7 @@
 const db = require("../models/Lesson.js");
 const auth = require("./../routes/auth");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const passport = require("../config/passport");
 
 module.exports = function(app){
 
@@ -24,5 +25,24 @@ module.exports = function(app){
        .catch(err => {
            res.json(err);
        }) 
+    })
+
+    app.post("/login", passport.authenticate("local"), function (req, res) {
+        res.json({
+            message: { email: req.user.email },
+        });
+    });
+
+    app.get("/ping", isAuthenticated, function (req, res) {
+        console.log(req.user);
+        res.json({
+            message: "ping!",
+        });
+    });
+
+    app.post("/api/signup", (req, res) => {
+        const user = new db(req.body);
+        console.log(user)
+        db.create(user).then(dbUser => { res.json(dbUser) })
     })
 }

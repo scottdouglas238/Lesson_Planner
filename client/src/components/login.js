@@ -1,10 +1,16 @@
 import React, { Component, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { LOGIN } from "../utils/actions";
+import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import axios from "axios";
 import "../css/styles.css";
 
 
 function Login(){
+  // const history = useHistory();
+  // const [state, dispatch] = useStoreContext();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

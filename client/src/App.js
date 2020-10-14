@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 import "./App.css";
 import Login from "./components/login"
 import TeacherLanding from "./components/Teacherlanding"
@@ -7,6 +7,8 @@ import LessonPlanForm from "./components/handleinputform";
 import AdminLanding from "./components/Adminlanding";
 import viewLessonPlan from "./components/viewLessonPlan";
 import viewAll from "./components/viewAll";
+import { useStoreContext } from "./utils/GlobalState"
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,13 @@ function App() {
       </div>
     </Router>
   );
+}
+
+function PrivateRoute({ component: Component, ...props}){
+  const [state] = useStoreContext();
+  console.log(state);
+  if(state.auth) return <Route component={Component}{...props} />;
+  return <Redirect to="/" />;
 }
 
 
