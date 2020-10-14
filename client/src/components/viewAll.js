@@ -8,10 +8,12 @@ export default function viewAll() {
   return (
     <>
       <Navbar />
-      <div class="column">
+
         <LessonPlanButton />
-        <LessonTile />
-      </div>
+      
+          <LessonTile />
+        
+    
     </>
   );
 }
