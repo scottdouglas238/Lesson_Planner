@@ -80,7 +80,7 @@ function LessonPlanForm() {
                   </div>
                 </div>
               </div>
-              ​
+              
               <div className="field">
                 <label className="label">Course</label>
                 <div className="control">
