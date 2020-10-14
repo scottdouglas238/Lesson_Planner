@@ -8,6 +8,10 @@ export default {
 
 getLesson: function(id) {
     return axios.get("/api/lesson" + id)
+  },
+
+getLessons: function() {
+    return axios.get("/api/lessons")
 }
 
 };
