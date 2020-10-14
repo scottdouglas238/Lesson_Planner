@@ -9,9 +9,14 @@ const port = 5000;
 const MONGO_URI = "mongodb://127.0.0.1:27017/lessons";
 
 mongoose
-    .connect(MONGO_URI, { useNewUrlParser: true})
-    .then(console.log(`MongoDB connected ${MONGO_URI}`))
-    .catch(err=> console.log(err));
+  .connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/lessons", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  })
+  .then(console.log(`MongoDB connected ${MONGO_URI}`))
+  .catch((err) => console.log(err));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
