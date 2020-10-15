@@ -23,22 +23,24 @@ function Display(props) {
     <>
       <Navbar />
       <div className="container">
-        <Label>
-          <h5>Teacher Name:</h5>
-        </Label>
-        <Box>
-          <p>{lesson.teacherName}</p>
-        </Box>
+        <div className="column">
+          <Label>
+            <h5>Teacher Name:</h5>
+          </Label>
+          <Box>
+            <p>{lesson.teacherName}</p>
+          </Box>
 
-        <Label>
-          <h5>Lesson Name:</h5>
-        </Label>
-        <Box>
-          <p>{lesson.lessonName}</p>
-        </Box>
-        <Label>
-          <h5>Department:</h5>
-        </Label>
+          <Label>
+            <h5>Lesson Name:</h5>
+          </Label>
+          <Box>
+            <p>{lesson.lessonName}</p>
+          </Box>
+          <Label>
+            <h5>Department:</h5>
+          </Label>
+        </div>
         <Box>
           <p>{lesson.department}</p>
         </Box>
