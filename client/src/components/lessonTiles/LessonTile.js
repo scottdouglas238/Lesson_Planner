@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../css/landingpagestyle.css";
-import { CardHeader } from "./card";
-import API from "../utils/API";
-import "../css/style.scss";
+import "../../css/landingpagestyle.css";
+import { CardHeader } from "../card";
+import API from "../../utils/API";
+import "../../css/style.scss";
 import { Link } from "react-router-dom";
 
 function LessonTile(props) {
