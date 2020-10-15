@@ -2,22 +2,30 @@ import React, { useState } from "react";
 import API from "../utils/API";
 import Navbar from "./navbar";
 import { Link } from "react-router-dom";
-
+import { useStoreContext } from "../utils/GlobalState";
 function LessonPlanForm() {
+  const [globalState, setGlobalState] = useStoreContext();
   const [formObject, setFormObject] = useState({});
-
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value });
+    setFormObject({
+      ...formObject,
+      [name]: value,
+    });
   }
-
   function handleFormSubmit(event) {
     event.preventDefault();
+    //  API.getId({id: globalState.user.id
+    //   })
+    // console.log("Global State: " + JSON.stringify(globalState))
+    console.log(globalState.user.id);
     if (formObject.teacherName && formObject.lessonName) {
       API.saveLesson({
+        userId: globalState.user.id,
         teacherName: formObject.teacherName,
         lessonName: formObject.lessonName,
         department: formObject.department,
+        course: formObject.course,
         gradeLevel: formObject.gradeLevel,
         concepts: formObject.concepts,
         standards: formObject.standards,
@@ -35,7 +43,6 @@ function LessonPlanForm() {
         .catch((err) => console.log(err));
     }
   }
-
   return (
     <>
       <form>
@@ -81,7 +88,6 @@ function LessonPlanForm() {
                   </div>
                 </div>
               </div>
-
               <div className="field">
                 <label className="label">Course</label>
                 <div className="control">
@@ -220,14 +226,14 @@ function LessonPlanForm() {
           </div>
           <div className="field is-grouped">
             <div className="control">
-            
               <button className="button is-link" onClick={handleFormSubmit}>
-              <Link to="/profile">Submit</Link>
+                <Link to="/profile">Submit</Link>
               </button>
-            
             </div>
             <div className="control">
-              <button className="button is-link is-light"><Link to="/profile">Cancel</Link></button>
+              <button className="button is-link is-light">
+                <Link to="/profile">Cancel</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -235,5 +241,4 @@ function LessonPlanForm() {
     </>
   );
 }
-
 export default LessonPlanForm;
