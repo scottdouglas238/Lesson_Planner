@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 import "../css/landingpagestyle.css";
-import Navbar from "./navbar.js";
-import LessonPlanButton from "./newLessonPlanbutton"
-import LessonTile from "./LessonTile"
-import "../css/style.scss";
+import LessonPlanButton from "../components/newLessonPlanbutton"
+import LessonTile from "../components/LessonTile"
+import Navbar from "../components/navbar";
+
 function TeacherLanding() {
   return (
     <>
@@ -17,17 +17,7 @@ function TeacherLanding() {
         </div>
       </div>
     </>
-  );
+  )
 }
+
 export default TeacherLanding;
-    
-
-                        
-
-
-
-
-
-    
-
-      
