@@ -1,24 +1,32 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.css";
-import Login from "./components/login"
-import TeacherLanding from "./components/Teacherlanding"
-import LessonPlanForm from "./components/handleinputform";
-import viewAll from "./components/viewAll";
+import { Route, Switch, Link, Redirect } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import LessonPlanForm from "./components/handleinputform"
+import { useStoreContext } from "./utils/GlobalState";
 import Display from "./components/display/display";
+
 function App() {
+  const [state] = useStoreContext();
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Switch>
         <Route exact path="/" component={Login} />
-        <Route exact path="/landingPage" component={TeacherLanding} />
-        <Route exact path="/newLessonPlan" component={LessonPlanForm} />
-        <Route exact path="/viewAll" component={viewAll} />
-        <Route exact path="/lesson/:id" component={Display} />
-      </div>
-    </Router>
+        {/* <Route exact path="/login" component={Login} /> */}
+        <PrivateRoute exact path="/profile" component={Profile} />
+        <PrivateRoute exact path="/newLessonPlan" component={LessonPlanForm} />
+        <PrivateRoute exact path="/lesson/:id" component={Display} />
+      </Switch>
+    </div>
   );
 }
 
+function PrivateRoute({ component: Component, ...props }) {
+  const [state] = useStoreContext();
+  console.log(state);
+  if (state.auth) return <Route component={Component} {...props} />;
+  return <Redirect to="/" />;
+}
 
 export default App;
