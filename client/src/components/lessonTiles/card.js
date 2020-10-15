@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/landingpagestyle.css";
-import "../css/style.scss";
+import "../../css/landingpagestyle.css";
+import "../../css/style.scss";
 
 export function CardHeader({ children }) {
   return (
