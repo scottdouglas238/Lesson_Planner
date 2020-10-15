@@ -35,9 +35,7 @@ function LessonTile(props) {
                   </p>
                 </div>
               </div>
-              <Link to={"/lesson/" + lesson._id}>
-                View
-              </Link>
+              <Link to={"/lesson/" + lesson._id}>View</Link>
             </div>
           </>
         </div>
