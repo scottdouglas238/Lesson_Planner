@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import API from "../utils/API";
 import Navbar from "./navbar";
+import { Link } from "react-router-dom";
 
 function LessonPlanForm() {
   const [formObject, setFormObject] = useState({});
@@ -29,7 +30,7 @@ function LessonPlanForm() {
         assessment: formObject.assessment,
         closingActivity: formObject.closingActivity,
       })
-        .then((window.location.href = "/landingpage"))
+        .then(console.log("test"))
         // ^ make this a redirect back to the teacher landing page
         .catch((err) => console.log(err));
     }
@@ -37,7 +38,7 @@ function LessonPlanForm() {
 
   return (
     <>
-      <form onSubmit>
+      <form>
         <Navbar />
         <div className="container has-text-left test">
           <div className="columns">
@@ -80,7 +81,7 @@ function LessonPlanForm() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="field">
                 <label className="label">Course</label>
                 <div className="control">
@@ -219,12 +220,14 @@ function LessonPlanForm() {
           </div>
           <div className="field is-grouped">
             <div className="control">
+            
               <button className="button is-link" onClick={handleFormSubmit}>
-                Submit
+              <Link to="/profile">Submit</Link>
               </button>
+            
             </div>
             <div className="control">
-              <button className="button is-link is-light">Cancel</button>
+              <button className="button is-link is-light"><Link to="/profile">Cancel</Link></button>
             </div>
           </div>
         </div>
