@@ -1,7 +1,8 @@
 import React from 'react'
 import "../css/landingpagestyle.css";
 import LessonPlanButton from "../components/newLessonPlanbutton"
-import LessonTile from "../components/LessonTile"
+import LessonTile from "../components/lessonTiles/LessonTile"
+import DepartmentTile from "../components/lessonTiles/departmenttile"
 import Navbar from "../components/navbar";
 
 function TeacherLanding() {
@@ -12,7 +13,12 @@ function TeacherLanding() {
       <div className="section">
         <div className="container is-fluid">
           <div className="row">
+            <h3>Your Lessons:</h3>
             <LessonTile />
+          </div>
+          <div className="row">
+            <h3>Lessons in your Department:</h3>
+           <DepartmentTile />
           </div>
         </div>
       </div>

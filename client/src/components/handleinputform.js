@@ -82,8 +82,13 @@ function LessonPlanForm() {
                       <option>Math</option>
                       <option>English</option>
                       <option>Science</option>
-                      <option>Philosophy</option>
-                      <option>Spanish</option>
+                      <option>Social Studies</option>
+                      <option>Foreign Language</option>
+                      <option>Visual and Performing Arts</option>
+                      <option>P.E. and Health</option>
+                      <option>S.T.E.M and Technology</option>
+                      <option>Shop and Agriculture</option>
+                      <option>SPED</option>
                     </select>
                   </div>
                 </div>
