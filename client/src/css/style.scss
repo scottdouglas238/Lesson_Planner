@@ -1,0 +1,8 @@
+$card-width: 25rem;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, $card-width);
+    grid-gap: .1rem;
+    justify-content: space-between;
+    align-content: flex-start
+}

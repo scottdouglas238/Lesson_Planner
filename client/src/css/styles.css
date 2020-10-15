@@ -1,0 +1,155 @@
+html,
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    background-color: #2b3c1e;
+}
+
+.image {
+    background-position: center center;
+    background-size: cover;
+}
+
+#left {
+    padding: 7%;
+    background-color: #2b3c1e;
+}
+
+#right {
+    background-image: url('../media/background.jpg');
+}
+
+.columns {
+    margin-top: 0;
+}
+
+.openbook {
+    max-width: 60%;
+    max-height: 20%;
+}
+
+.name,
+.hr,
+.job,
+.description,
+.button {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+}
+
+.hr {
+    background-color: #7b8852;
+    border: none;
+    content: '';
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transform-origin: center left;
+    width: 4rem;
+}
+
+#right {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 769px) {
+    #right {
+        width: 60%;
+    }
+}
+
+#right {
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+@media (min-width: 769px) {
+    #right {
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+/* Keyframes */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fillUp {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(2);
+    }
+}
+
+
+/* Animation triggers */
+
+.fields {
+    animation-name: slideUp;
+    animation-delay: 150ms
+}
+
+.name {
+    animation-name: slideDown;
+    color: blanchedalmond;
+    text-align: left;
+}
+
+.job,
+.description {
+    animation-name: slideUp;
+}
+
+.hr {
+    animation-name: fillUp;
+}
+
+.button {
+    animation-duration: 500ms;
+    animation-name: slideUp;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.new {
+    animation-name: slideLeft;
+}
+
+
+/* Delays */
+
+.name {
+    animation-delay: 100ms;
+}
+
+.description {
+    animation-delay: 400ms;
+}

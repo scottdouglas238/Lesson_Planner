@@ -1,0 +1,68 @@
+html,
+body {
+    background-color: #7e796f;
+    min-height: 100vh;
+}
+
+.plans {
+    color: blanchedalmond;
+}
+
+.bk {
+    background-color: #2b3c1e;
+    color: #2b3c1e
+}
+
+.lesson {
+    background-color: #c9c0ae;
+}
+
+.vertical {
+    margin-top: 10px;
+}
+
+
+/* Keyframes */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        /* transform: translateX(3rem) */
+    }
+    to {
+        opacity: 1;
+        /* transform: translateX(0) */
+    }
+}
+
+
+/* Animations */
+
+.test,
+.test2,
+.test3,
+.test4 {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+}
+
+.test {
+    animation-name: appear;
+    animation-delay: 250ms;
+}
+
+.test2 {
+    animation-name: appear;
+    animation-delay: 325ms;
+}
+
+.test3 {
+    animation-name: appear;
+    animation-delay: 400ms;
+}
+
+.test4 {
+    animation-name: appear;
+    animation-delay: 475ms;
+}
