@@ -23,7 +23,7 @@ module.exports = function(app){
         res.json(dbLesson);
       });
     });
-
+  
     app.get("/api/lessons", (req, res) => {
       dbLesson.find({})
         .then((dbLesson) => {
@@ -44,4 +44,3 @@ module.exports = function(app){
         });
     });
 }
-
