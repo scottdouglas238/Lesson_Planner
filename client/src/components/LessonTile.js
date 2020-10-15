@@ -23,7 +23,7 @@ function LessonTile(props) {
       {lessons.map((lesson) => (
         <div key={lesson._id} className="tile is-parent">
           <>
-            <div className="tile is-child card lesson">
+            <div className="tile is-child card lesson testcard">
               <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
               <div className="card-content">
                 <div className="content">
