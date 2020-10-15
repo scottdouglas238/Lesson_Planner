@@ -11,14 +11,8 @@ function App() {
   const [state] = useStoreContext();
   return (
     <div className="App">
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
-        {state.auth || <Link to="/login">login</Link>}
-      </nav>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} />
         <PrivateRoute exact path="/profile" component={Profile} />
         <PrivateRoute exact path="/newLessonPlan" component={LessonPlanForm} />
         <PrivateRoute exact path="/lesson/:id" component={Display} />
