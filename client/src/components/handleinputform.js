@@ -18,6 +18,7 @@ function LessonPlanForm() {
         teacherName: formObject.teacherName,
         lessonName: formObject.lessonName,
         department: formObject.department,
+        course: formObject.course,
         gradeLevel: formObject.gradeLevel,
         concepts: formObject.concepts,
         standards: formObject.standards,
