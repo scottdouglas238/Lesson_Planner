@@ -56,7 +56,6 @@ $navbar: #2b3c1e;
     height: 40px;
     width: 85px;
     opacity: 1;
-    border: 1px solid $navbar(22, 76, 167, 0.6);
 }
 
 .cardBtn span {
@@ -64,6 +63,22 @@ $navbar: #2b3c1e;
     font-size: 10px;
     font-weight: 00;
     letter-spacing: 0.7px;
+}
+
+.Btn {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: $card;
+    position: relative;
+    border-radius: 5px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 40px;
+    width: 207px;
+    opacity: 1;
 }
 
 //animations

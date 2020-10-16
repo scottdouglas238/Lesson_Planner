@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/style.scss"
 
 function LessonPlanButton() {
   return (
-    <button
-      className="mt-4 button is-success is-inverted is-outlined is-inline-flex has-text-weight-bold">
-      <Link to="/newLessonPlan">Create new lesson plan</Link>
-    </button>
+    
+      <Link to="/newLessonPlan">
+        <button className="Btn">Create new lesson plan</button>
+      </Link>
+   
   );
 }
 export default LessonPlanButton;
