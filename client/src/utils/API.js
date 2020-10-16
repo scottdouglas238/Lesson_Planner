@@ -23,7 +23,7 @@ getLessonsbyDepartment: function() {
 },
 
 editLesson: function() {
-  return axios.put("/lessons/:id")
+  return axios.put("/updateLesson")
 },
 
 deleteLesson: function(id) {

@@ -15,7 +15,9 @@ function Update(props) {
 
   useEffect(() => {
     getLesson(id);
-  });
+    console.log(id)
+  }, []);
+
 
   function getLesson(id) {
     API.getLesson(id)
@@ -35,9 +37,10 @@ function Update(props) {
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  console.log(globalState.user.id);
+  console.log();
   if (formObject.teacherName && formObject.lessonName) {
-    API.saveLesson({
+    API.editLesson({
+      _id: formObject.id,
       userId: globalState.user.id,
       teacherName: formObject.teacherName,
       lessonName: formObject.lessonName,
