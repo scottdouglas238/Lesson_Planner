@@ -1,17 +1,25 @@
+$plex: 'Source Code Pro',
+monospace;
 $card-width: 300px;
 $card-height: 325px;
 $point: #7e796f;
 $point-dark: darken($point, 7%);
 $card-shadow: -7px -7px 0px 0px $point-dark;
+$card-shadow1: -6px -6px 0px 0px $point-dark;
 $card_padding: 10px;
 $card_round: 10px;
 $header_padding: 10px 10px 0px 0px;
+$c-darkGray: #4a4a4e;
+$card: #c9c0ae;
+$card-dark: darken($card, 7%);
+$navbar: #2b3c1e;
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, $card-width);
     grid-gap: .1rem;
     justify-content: space-between;
-    align-content: flex-start
+    align-content: flex-start;
+    font-family: $plex;
 }
 
 .testcard {
@@ -43,4 +51,86 @@ $header_padding: 10px 10px 0px 0px;
     animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
     animation-fill-mode: both;
     animation-name: appear;
+}
+
+.cardBtn {
+    background-color: $card;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 40px;
+    width: 85px;
+    opacity: 1;
+    // background-color: #ffffff;
+    border: 1px solid $navbar(22, 76, 167, 0.6);
+}
+
+.cardBtn span {
+    color: $navbar;
+    font-size: 10px;
+    font-weight: 00;
+    letter-spacing: 0.7px;
+}
+
+.cardBtn:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+.cardBtn:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.05);
+    box-shadow: $card-shadow1;
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
