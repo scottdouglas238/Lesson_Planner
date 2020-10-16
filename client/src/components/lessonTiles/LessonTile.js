@@ -17,6 +17,12 @@ function LessonTile(props) {
       .then((res) => setLessons(res.data))
       .catch((err) => console.log(err));
   }
+
+  function deleteLesson(id){
+    API.deleteLesson(id)
+      .then(res=>loadLessons())
+      .catch(err => console.log(err));
+  }
   console.log(lessons);
   return (
     <div className="cards">
@@ -26,9 +32,12 @@ function LessonTile(props) {
             <div className="tile is-child card lesson testcard zoom">
               <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
               <div className="card-content">
-                <div className="content">
+                <div className="content textDivit">
                   <p>
                     <strong>Teacher :</strong> {lesson.teacherName}
+                  </p>
+                  <p>
+                    <strong>Department :</strong> {lesson.department}
                   </p>
                   <p>
                     <strong>Department :</strong> {lesson.department}
@@ -37,7 +46,7 @@ function LessonTile(props) {
               </div>
               <Link to={"/lesson/" + lesson._id}><button className="cardBtn">View</button></Link>
               <Link to={"/lesson/" + lesson._id}><button className="cardBtn">Edit</button></Link>
-              <Link to={"/lesson/" + lesson._id}><button className="cardBtn">Delete</button></Link>
+              <button className="cardBtn" onClick={() => deleteLesson(lesson._id)}>Delete</button>
             </div>
           </>
         </div>

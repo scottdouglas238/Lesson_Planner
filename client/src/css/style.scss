@@ -4,15 +4,16 @@ $card-width: 300px;
 $card-height: 325px;
 $point: #7e796f;
 $point-dark: darken($point, 7%);
-$card-shadow: -7px -7px 0px 0px $point-dark;
-$card-shadow1: -6px -6px 0px 0px $point-dark;
-$card_padding: 10px;
+$card-shadow: 6px 6px 0px 0px $point-dark;
+$card-shadowHov: 5px 5px 0px 0px $point-dark;
+$card_padding: 10px 10px 10px 10px;
 $card_round: 10px;
 $header_padding: 10px 10px 0px 0px;
-$c-darkGray: #4a4a4e;
 $card: #c9c0ae;
 $card-dark: darken($card, 7%);
 $navbar: #2b3c1e;
+//variables up above
+//styling of elements
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, $card-width);
@@ -27,38 +28,26 @@ $navbar: #2b3c1e;
     -webkit-box-shadow: $card-shadow;
     box-shadow: $card-shadow;
     border-radius: $card_round;
-    background-color: #c9c0ae;
+    background-color: $card;
     padding: $card_padding;
+}
+
+.textDivit {
+    border-radius: 18px;
+    background-color: $card-shadow;
+    border: #afa797;
+    border-style: solid; // box-shadow: inset 5px 5px 0px #afa797, inset -5px -5px 0px #e3d9c5;
+    padding: 20px
 }
 
 .testcardheader {
     border-radius: $card_padding;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        /* transform: translateX(3rem) */
-    }
-    to {
-        opacity: 1;
-        /* transform: translateX(0) */
-    }
-}
-
-.cards {
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
-    animation-fill-mode: both;
-    animation-name: appear;
-}
-
 .cardBtn {
     background-color: $card;
     position: relative;
-    outline: none;
-    text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -67,7 +56,6 @@ $navbar: #2b3c1e;
     height: 40px;
     width: 85px;
     opacity: 1;
-    // background-color: #ffffff;
     border: 1px solid $navbar(22, 76, 167, 0.6);
 }
 
@@ -78,13 +66,14 @@ $navbar: #2b3c1e;
     letter-spacing: 0.7px;
 }
 
-.cardBtn:hover {
-    animation: rotate 0.7s ease-in-out both;
-}
-
-.cardBtn:hover span {
-    animation: storm 0.7s ease-in-out both;
-    animation-delay: 0.06s;
+//animations
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes rotate {
@@ -123,14 +112,30 @@ $navbar: #2b3c1e;
     }
 }
 
+//animation triggers
+.cards {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+    animation-fill-mode: both;
+    animation-name: appear;
+}
+
+.cardBtn:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+.cardBtn:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
 .zoom {
-    transition: transform .2s;
-    /* Animation */
+    transition: transform .3s;
+    // transition: box-shadow .2s;
     margin: 0 auto;
 }
 
 .zoom:hover {
     transform: scale(1.05);
-    box-shadow: $card-shadow1;
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: $card-shadowHov;
 }
