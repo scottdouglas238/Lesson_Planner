@@ -10,12 +10,16 @@ import Box from "./box"
 function Update(props) {
   const [lesson, setLesson] = useState({});
   const id = props.match.params.id;
+  console.log(props)
   const [globalState, setGlobalState] = useStoreContext();
 
   useEffect(() => {
     getLesson(id);
   }, []);
 
+  function Redirect() {
+    props.history.push("/profile");
+  }
 
   function getLesson(id) {
     API.getLesson(id)
@@ -41,7 +45,7 @@ function Update(props) {
       userId: globalState.user.id,
       ...lesson
     })
-      .then(console.log("test"))
+      .then(Redirect())
       // ^ make this a redirect back to the teacher landing page
       .catch((err) => console.log(err));
 
@@ -191,9 +195,9 @@ function Update(props) {
                 value={lesson.closingActivity}
                 onChange={handleInputChange}></input>
             </Box>
-            <Link to="/profile">
-              <button className="button is-link" onClick={handleFormSubmit}>
-              </button></Link>
+           
+              <button className="button is-link" onClick={handleFormSubmit}>Submit
+              </button>
           </form>
         </div>
       </div>

@@ -39,7 +39,7 @@ function DepartmentTile(props) {
                   </div>
                 </div>
                 <Link to={"/lesson/" + lesson._id}>
-                  <button className="cardBtn">View</button>
+                  <button className="cardBtnAlt">View</button>
                 </Link>
               </div>
             </>
