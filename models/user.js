@@ -15,12 +15,6 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 4,
-    maxlength: 20,
-    // validate:{
-    //   message: 'Please Choose a valid password',
-    //   validator: (val) => /^[a-zA-Z]+$/.test(val),
-    // }
   },
   firstName: {
     type: String,
@@ -29,6 +23,7 @@ const UserSchema = new Schema({
   lastName: {
     type: String,
     required: true,
+
   },
   department: {
     type: String,
