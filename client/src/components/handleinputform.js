@@ -234,9 +234,8 @@ function LessonPlanForm() {
           </div>
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link" onClick={handleFormSubmit}>
-                <Link to="/profile">Submit</Link>
-              </button>
+            <Link to="/profile"><button className="button is-link" onClick={handleFormSubmit}>
+              Submit</button></Link>
             </div>
             <div className="control">
               <button className="button is-link is-light">
