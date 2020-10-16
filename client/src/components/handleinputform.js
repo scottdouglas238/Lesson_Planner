@@ -89,6 +89,9 @@ function LessonPlanForm() {
                       <option>S.T.E.M and Technology</option>
                       <option>Shop and Agriculture</option>
                       <option>SPED</option>
+                      <option>k-2nd</option>
+                      <option>3rd-5th</option>
+                      <option>Other</option>
                     </select>
                   </div>
                 </div>

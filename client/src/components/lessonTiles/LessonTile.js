@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../css/landingpagestyle.css";
-import { CardHeader } from "../card";
+import { CardHeader } from "./card";
 import API from "../../utils/API";
 import "../../css/style.scss";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ function LessonTile(props) {
   }, []);
 
   function loadLessons() {
-    API.getLessons()
+    API.getLessonsbyUser()
       .then((res) => setLessons(res.data))
       .catch((err) => console.log(err));
   }
