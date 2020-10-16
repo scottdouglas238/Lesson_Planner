@@ -26,8 +26,8 @@ editLesson: function() {
   return axios.put("/lessons/:id")
 },
 
-deleteLesson: function() {
-  return axios.delete("/deleteLesson/:id")
+deleteLesson: function(id) {
+  return axios.delete("/deleteLesson/" + id)
 }
 
 };
