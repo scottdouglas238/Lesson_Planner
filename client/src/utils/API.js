@@ -22,8 +22,8 @@ getLessonsbyDepartment: function() {
   return axios.get("/lessons/:department")
 },
 
-editLesson: function() {
-  return axios.put("/updateLesson")
+editLesson: function(lesson) {
+  return axios.put("/updateLesson", lesson)
 },
 
 deleteLesson: function(id) {
