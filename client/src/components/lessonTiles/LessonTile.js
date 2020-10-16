@@ -23,7 +23,7 @@ function LessonTile(props) {
       {lessons.map((lesson) => (
         <div key={lesson._id} className="tile is-parent">
           <>
-            <div className="tile is-child card lesson testcard">
+            <div className="tile is-child card lesson testcard zoom">
               <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
               <div className="card-content">
                 <div className="content">
@@ -35,7 +35,9 @@ function LessonTile(props) {
                   </p>
                 </div>
               </div>
-              <Link to={"/lesson/" + lesson._id}>View</Link>
+              <Link to={"/lesson/" + lesson._id}><button className="cardBtn">View</button></Link>
+              <Link to={"/lesson/" + lesson._id}><button className="cardBtn">Edit</button></Link>
+              <Link to={"/lesson/" + lesson._id}><button className="cardBtn">Delete</button></Link>
             </div>
           </>
         </div>
