@@ -3,7 +3,8 @@ import API from "../utils/API";
 import Navbar from "./navbar";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
-function LessonPlanForm() {
+
+function LessonPlanForm({history}) {
   const [globalState, setGlobalState] = useStoreContext();
   const [formObject, setFormObject] = useState({});
   function handleInputChange(event) {
@@ -13,36 +14,38 @@ function LessonPlanForm() {
       [name]: value,
     });
   }
+  
+  function Redirect() {
+    history.push("/profile")
+  }
+
   function handleFormSubmit(event) {
     event.preventDefault();
-    //  API.getId({id: globalState.user.id
-    //   })
-    // console.log("Global State: " + JSON.stringify(globalState))
     console.log(globalState.user.id);
-    if (formObject.teacherName && formObject.lessonName) {
-      API.saveLesson({
-        userId: globalState.user.id,
-        teacherName: formObject.teacherName,
-        lessonName: formObject.lessonName,
-        department: formObject.department,
-        course: formObject.course,
-        gradeLevel: formObject.gradeLevel,
-        concepts: formObject.concepts,
-        standards: formObject.standards,
-        skills: formObject.skills,
-        objectives: formObject.objectives,
-        materials: formObject.materials,
-        goal: formObject.goal,
-        openingActivity: formObject.openingActivity,
-        activity: formObject.activity,
-        assessment: formObject.assessment,
-        closingActivity: formObject.closingActivity,
-      })
-        .then(console.log("test"))
-        // ^ make this a redirect back to the teacher landing page
-        .catch((err) => console.log(err));
-    }
+    API.saveLesson({
+      userId: globalState.user.id,
+      teacherName: formObject.teacherName,
+      lessonName: formObject.lessonName,
+      department: formObject.department,
+      course: formObject.course,
+      gradeLevel: formObject.gradeLevel,
+      concepts: formObject.concepts,
+      standards: formObject.standards,
+      skills: formObject.skills,
+      objectives: formObject.objectives,
+      materials: formObject.materials,
+      goal: formObject.goal,
+      openingActivity: formObject.openingActivity,
+      activity: formObject.activity,
+      assessment: formObject.assessment,
+      closingActivity: formObject.closingActivity,
+    })
+    .then(Redirect())
+    // ^ make this a redirect back to the teacher landing page
+    .catch((err) => console.log(err));
   }
+
+
   return (
     <>
       <form>
@@ -234,8 +237,13 @@ function LessonPlanForm() {
           </div>
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link" onClick={handleFormSubmit}>
-                <Link to="/profile">Submit</Link>
+              <button
+                className="button is-link"
+                onClick=
+                  {handleFormSubmit}
+                
+                >
+                Submit
               </button>
             </div>
             <div className="control">
