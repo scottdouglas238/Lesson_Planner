@@ -37,23 +37,23 @@ function Update(props) {
 
 
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
+function handleFormSubmit(event) {
+  event.preventDefault();
     console.log("asdlfkjasdwelrkjqwe");
     API.editLesson({
       _id: id,
       userId: globalState.user.id,
-      ...lesson
+     ...lesson
     })
       .then(Redirect())
       // ^ make this a redirect back to the teacher landing page
       .catch((err) => console.log(err));
-
-  }
-
-
+  
+}
 
 
+
+  
 
   return (
     <>
@@ -65,7 +65,7 @@ function Update(props) {
               <h5>Teacher Name:</h5>
             </Label>
             <input
-              name="teacherName"
+            name="teacherName"
               value={lesson.teacherName}
               onChange={handleInputChange}></input>
             <Label>
@@ -73,7 +73,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="lessonName"
+              name="lessonName"
                 value={lesson.lessonName}
                 onChange={handleInputChange}></input>
             </Box>
@@ -82,7 +82,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="department"
+              name="department"
                 value={lesson.department}
                 onChange={handleInputChange}></input>
             </Box>
@@ -91,7 +91,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="course"
+              name="course"
                 value={lesson.course}
                 onChange={handleInputChange}></input>
             </Box>
@@ -100,7 +100,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="gradeLevel"
+              name="gradeLevel"
                 value={lesson.gradeLevel}
                 onChange={handleInputChange}></input>
             </Box>
@@ -109,7 +109,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="concepts"
+              name="concepts"
                 value={lesson.concepts}
                 onChange={handleInputChange}></input>
             </Box>
@@ -119,7 +119,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="standards"
+              name="standards"
                 value={lesson.standards}
                 onChange={handleInputChange}></input>
             </Box>
@@ -128,7 +128,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="skills"
+              name="skills"
                 value={lesson.skills}
                 onChange={handleInputChange}></input>
             </Box>
@@ -137,7 +137,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="objectives"
+              name="objectives"
                 value={lesson.objectives}
                 onChange={handleInputChange}></input>
             </Box>
@@ -146,7 +146,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="materials"
+              name="materials"
                 value={lesson.materials}
                 onChange={handleInputChange}></input>
             </Box>
@@ -155,7 +155,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="goal"
+              name="goal"
                 value={lesson.goal}
                 onChange={handleInputChange}></input>
             </Box>
@@ -164,7 +164,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="openingActivity"
+              name="openingActivity"
                 value={lesson.openingActivity}
                 onChange={handleInputChange}></input>
             </Box>
@@ -173,7 +173,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="activity"
+              name="activity"
                 value={lesson.activity}
                 onChange={handleInputChange}></input>
             </Box>
@@ -182,7 +182,7 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="assessment"
+              name="assessment"
                 value={lesson.assessment}
                 onChange={handleInputChange}></input>
             </Box>
@@ -191,11 +191,10 @@ function Update(props) {
             </Label>
             <Box>
               <input
-                name="closingActivity"
+              name="closingActivity"
                 value={lesson.closingActivity}
                 onChange={handleInputChange}></input>
             </Box>
-           
               <button className="button is-link" onClick={handleFormSubmit}>Submit
               </button>
           </form>
