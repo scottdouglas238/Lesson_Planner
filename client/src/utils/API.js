@@ -27,7 +27,7 @@ editLesson: function() {
 },
 
 deleteLesson: function() {
-  return axios.delete("/lessons/:id")
+  return axios.delete("/deleteLesson/:id")
 }
 
 };
