@@ -34,13 +34,13 @@ function LessonTile(props) {
               <div className="card-content">
                 <div className="content textDivit">
                   <p>
-                    <strong>Course :</strong> {lesson.course}
+                    <strong>Course:</strong> {lesson.course}
                   </p>
                   <p>
-                    <strong>Concepts :</strong> {lesson.concepts}
+                    <strong>Department:</strong> {lesson.department}
                   </p>
                   <p>
-                    <strong>Grade Level :</strong> {lesson.gradeLevel}
+                    <strong>Grade Level:</strong> {lesson.gradeLevel}
                   </p>
                 </div>
               </div>

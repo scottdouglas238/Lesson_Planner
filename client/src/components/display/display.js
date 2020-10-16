@@ -11,7 +11,7 @@ function Display(props) {
 
   useEffect(() => {
     getLesson(id);
-  });
+  }, []);
 
   function getLesson(id) {
     API.getLesson(id)

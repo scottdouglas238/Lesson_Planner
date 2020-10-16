@@ -33,6 +33,9 @@ function DepartmentTile(props) {
                     <p>
                       <strong>Course: </strong> {lesson.course}
                     </p>
+                    <p>
+                      <strong>Grade Level :</strong> {lesson.gradeLevel}
+                    </p>
                   </div>
                 </div>
                 <Link to={"/lesson/" + lesson._id}>
