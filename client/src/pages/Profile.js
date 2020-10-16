@@ -4,8 +4,10 @@ import LessonPlanButton from "../components/newLessonPlanbutton"
 import LessonTile from "../components/lessonTiles/LessonTile"
 import DepartmentTile from "../components/lessonTiles/departmenttile"
 import Navbar from "../components/navbar";
+import API from '../utils/API';
 
 function TeacherLanding() {
+  
   return (
     <>
       <Navbar />
