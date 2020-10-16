@@ -13,7 +13,7 @@ function DepartmentTile(props) {
     }, []);
 
     function loadLessons() {
-        API.getLessons()
+        API.getLessonsbyDepartment()
             .then((res) => setLessons(res.data))
             .catch((err) => console.log(err));
     }

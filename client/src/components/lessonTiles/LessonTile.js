@@ -13,7 +13,7 @@ function LessonTile(props) {
   }, []);
 
   function loadLessons() {
-    API.getLessons()
+    API.getLessonsbyUser()
       .then((res) => setLessons(res.data))
       .catch((err) => console.log(err));
   }

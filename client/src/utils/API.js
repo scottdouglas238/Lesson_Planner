@@ -12,6 +12,22 @@ getLesson: function(id) {
 
 getLessons: function() {
     return axios.get("/api/lessons")
+},
+
+getLessonsbyUser: function() {
+  return axios.get("/lessons/:id")
+},
+
+getLessonsbyDepartment: function() {
+  return axios.get("/lessons/:department")
+},
+
+editLesson: function() {
+  return axios.put("/lessons/:id")
+},
+
+deleteLesson: function() {
+  return axios.delete("/lessons/:id")
 }
 
 };
