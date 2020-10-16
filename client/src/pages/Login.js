@@ -9,8 +9,8 @@ function Login() {
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
 
-  const [email, setEmail] = useState("bighoss@gmail.com");
-  const [password, setPassword] = useState("earthworm");
+  const [email, setEmail] = useState("science@science.com");
+  const [password, setPassword] = useState("12345");
 
   function login(e) {
     e.preventDefault();
