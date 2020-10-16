@@ -6,6 +6,7 @@ import Profile from "./pages/Profile";
 import LessonPlanForm from "./components/handleinputform"
 import { useStoreContext } from "./utils/GlobalState";
 import Display from "./components/display/display";
+import Update from "./components/update/display";
 
 function App() {
   const [state] = useStoreContext();
@@ -16,6 +17,7 @@ function App() {
         <PrivateRoute exact path="/profile" component={Profile} />
         <PrivateRoute exact path="/newLessonPlan" component={LessonPlanForm} />
         <PrivateRoute exact path="/lesson/:id" component={Display} />
+        <PrivateRoute exact path="/editLesson/:id" component={Update} />
       </Switch>
     </div>
   );

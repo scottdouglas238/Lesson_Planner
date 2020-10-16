@@ -45,7 +45,7 @@ function LessonTile(props) {
                 </div>
               </div>
               <Link to={"/lesson/" + lesson._id}><button className="cardBtn">View</button></Link>
-              <Link to={"/lesson/" + lesson._id}><button className="cardBtn">Edit</button></Link>
+              <Link to={"/editLesson/" + lesson._id}><button className="cardBtn">Edit</button></Link>
               <button className="cardBtn" onClick={() => deleteLesson(lesson._id)}>Delete</button>
             </div>
           </>
