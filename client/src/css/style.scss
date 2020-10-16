@@ -65,6 +65,27 @@ $navbar: #2b3c1e;
     letter-spacing: 0.7px;
 }
 
+.cardBtnAlt {
+    background-color: $card;
+    position: relative;
+    border-radius: 5px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 40px;
+    width: 255px;
+    opacity: 1;
+}
+
+.cardBtnAlt span {
+    color: $navbar;
+    font-size: 10px;
+    font-weight: 00;
+    letter-spacing: 0.7px;
+}
+
 .Btn {
     margin-top: 5px;
     margin-left: 5px;
