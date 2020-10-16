@@ -11,11 +11,9 @@ function Update(props) {
   const [lesson, setLesson] = useState({});
   const id = props.match.params.id;
   const [globalState, setGlobalState] = useStoreContext();
-  const [formObject, setFormObject] = useState({});
 
   useEffect(() => {
     getLesson(id);
-    console.log(id)
   }, []);
 
 
@@ -27,46 +25,31 @@ function Update(props) {
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({
-      ...formObject,
+    setLesson({
+      ...lesson,
       [name]: value,
     });
   }
 
 
 
-function handleFormSubmit(event) {
-  event.preventDefault();
-  console.log();
-  if (formObject.teacherName && formObject.lessonName) {
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log("asdlfkjasdwelrkjqwe");
     API.editLesson({
-      _id: formObject.id,
+      _id: id,
       userId: globalState.user.id,
-      teacherName: formObject.teacherName,
-      lessonName: formObject.lessonName,
-      department: formObject.department,
-      course: formObject.course,
-      gradeLevel: formObject.gradeLevel,
-      concepts: formObject.concepts,
-      standards: formObject.standards,
-      skills: formObject.skills,
-      objectives: formObject.objectives,
-      materials: formObject.materials,
-      goal: formObject.goal,
-      openingActivity: formObject.openingActivity,
-      activity: formObject.activity,
-      assessment: formObject.assessment,
-      closingActivity: formObject.closingActivity,
+      ...lesson
     })
       .then(console.log("test"))
       // ^ make this a redirect back to the teacher landing page
       .catch((err) => console.log(err));
+
   }
-}
 
 
 
-  
+
 
   return (
     <>
@@ -78,14 +61,16 @@ function handleFormSubmit(event) {
               <h5>Teacher Name:</h5>
             </Label>
             <input
-              defaultValue={lesson.teacherName}
+              name="teacherName"
+              value={lesson.teacherName}
               onChange={handleInputChange}></input>
             <Label>
               <h5>Lesson Name:</h5>
             </Label>
             <Box>
               <input
-                defaultValue={lesson.lessonName}
+                name="lessonName"
+                value={lesson.lessonName}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -93,7 +78,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.department}
+                name="department"
+                value={lesson.department}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -101,7 +87,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.course}
+                name="course"
+                value={lesson.course}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -109,7 +96,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.gradeLevel}
+                name="gradeLevel"
+                value={lesson.gradeLevel}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -117,7 +105,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.concepts}
+                name="concepts"
+                value={lesson.concepts}
                 onChange={handleInputChange}></input>
             </Box>
 
@@ -126,7 +115,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.standards}
+                name="standards"
+                value={lesson.standards}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -134,7 +124,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.skills}
+                name="skills"
+                value={lesson.skills}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -142,7 +133,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.objectives}
+                name="objectives"
+                value={lesson.objectives}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -150,7 +142,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.materials}
+                name="materials"
+                value={lesson.materials}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -158,7 +151,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.goal}
+                name="goal"
+                value={lesson.goal}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -166,7 +160,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.openingActivity}
+                name="openingActivity"
+                value={lesson.openingActivity}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -174,7 +169,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.activity}
+                name="activity"
+                value={lesson.activity}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -182,7 +178,8 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.assessment}
+                name="assessment"
+                value={lesson.assessment}
                 onChange={handleInputChange}></input>
             </Box>
             <Label>
@@ -190,12 +187,13 @@ function handleFormSubmit(event) {
             </Label>
             <Box>
               <input
-                defaultValue={lesson.closingActivity}
+                name="closingActivity"
+                value={lesson.closingActivity}
                 onChange={handleInputChange}></input>
             </Box>
-            <button className="button is-link" onClick={handleFormSubmit}>
-              <Link to="/profile">Submit</Link>
-            </button>
+            <Link to="/profile">
+              <button className="button is-link" onClick={handleFormSubmit}>
+              </button></Link>
           </form>
         </div>
       </div>
