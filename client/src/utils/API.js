@@ -15,7 +15,7 @@ getLessons: function() {
 },
 
 getLessonsbyUser: function() {
-  return axios.get("/lessons/:id")
+  return axios.get("/getLessonbyUser")
 },
 
 getLessonsbyDepartment: function() {
