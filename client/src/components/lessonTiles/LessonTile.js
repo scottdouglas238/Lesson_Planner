@@ -26,9 +26,12 @@ function LessonTile(props) {
             <div className="tile is-child card lesson testcard zoom">
               <CardHeader key={lesson._id}>{lesson.lessonName}</CardHeader>
               <div className="card-content">
-                <div className="content">
+                <div className="content textDivit">
                   <p>
                     <strong>Teacher :</strong> {lesson.teacherName}
+                  </p>
+                  <p>
+                    <strong>Department :</strong> {lesson.department}
                   </p>
                   <p>
                     <strong>Department :</strong> {lesson.department}
