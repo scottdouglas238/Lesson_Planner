@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
-import { LOGIN, LOGOUT, LOADING } from "./actions";
+import { LOGIN, LOGOUT, LOADING, SIGNUP } from "./actions";
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -23,7 +23,12 @@ const reducer = (state, action) => {
         ...state,
         loading: true,
       };
-
+    case SIGNUP:
+      return {
+        ...state,
+        signup: true,
+      };
+    
     default:
       return state;
   }
@@ -32,6 +37,7 @@ const reducer = (state, action) => {
 const defaultState = {
   auth: false,
   user: null,
+  signup: false
 };
 
 const StoreProvider = ({ value = defaultState, ...props }) => {

@@ -13,14 +13,14 @@ module.exports = function (app) {
   app.post("/signup", (req, res) => {
     db.findOne({email: req.body.email}, (err, doc) =>{
       if(err) throw err;
-      if(doc){ console.log("User Already Exists")};
+      if(doc){ res.json(doc)};
       if(!doc){
         db.create(req.body).then((dbUser) => {
           res.json(dbUser);
         })
-        .catch((err) =>{
-          console.log(err)
-        })
+        // .catch((err) =>{
+        //   console.log(err)
+        // })
       }
     })
   });
