@@ -31,9 +31,13 @@ $navbar: #2b3c1e;
     border-radius: $card_round;
     background-color: $card;
     padding: $card_padding;
+    display: flex;
+    flex-direction: column;
 }
 
 .textDivit {
+    // min-height: 240px;
+    // min-width: 230px;
     border-radius: 18px;
     background-color: $card-shadow;
     border: #afa797;
@@ -57,6 +61,7 @@ $navbar: #2b3c1e;
     height: 40px;
     width: 85px;
     opacity: 1;
+    margin-top: auto;
 }
 
 .cardBtn span {
@@ -105,6 +110,10 @@ $navbar: #2b3c1e;
 
 #red {
     color: $red;
+}
+
+#logOut {
+    align-items: right;
 }
 
 //animations
