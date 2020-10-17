@@ -4,7 +4,6 @@ import { CardHeader } from "./card";
 import API from "../../utils/API";
 import "../../css/style.scss";
 import { Link } from "react-router-dom";
-import DepartmentTile from "./departmenttile"
 
 function LessonTile(props) {
   const [lessons, setLessons] = useState([]);
