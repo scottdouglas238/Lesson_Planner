@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { LOGIN } from "../utils/actions";
+import { SIGNUP } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
@@ -36,10 +36,10 @@ function Login(props) {
         lastName,
       }),
     })
-      .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         dispatch({
-          type: LOGIN,
+          type: SIGNUP,
           payload: data.message,
         });
         handleToggle();
