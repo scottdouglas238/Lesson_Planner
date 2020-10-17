@@ -3,6 +3,7 @@ monospace;
 $card-width: 300px;
 $card-height: 325px;
 $point: #7e796f;
+$red: #c02f2f;
 $point-dark: darken($point, 7%);
 $card-shadow: 6px 6px 0px 0px $point-dark;
 $card-shadowHov: 5px 5px 0px 0px $point-dark;
@@ -100,6 +101,10 @@ $navbar: #2b3c1e;
     height: 40px;
     width: 207px;
     opacity: 1;
+}
+
+#red {
+    color: $red;
 }
 
 //animations
