@@ -15,7 +15,7 @@ function Login() {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [department, setDepartment] = useState("")
-  
+
 
   function signUp(e) {
     e.preventDefault();
@@ -53,7 +53,7 @@ function Login() {
             <p className="title is-2 name">L-plan</p>
             <hr className="hr" />
             <div className="content has-text-grey description">
-            {/* this is where the email goes */}
+              {/* this is where the email goes */}
               <div className="field">
                 <p className="control has-icons-left has-icons-right">
                   <input
@@ -80,7 +80,7 @@ function Login() {
                     placeholder="First Name"
                     onChange={(e) => setFirstName(e.target.value)}
                   />
-                 
+
                 </p>
               </div>
               {/* last name */}
@@ -93,21 +93,35 @@ function Login() {
                     placeholder="Last Name"
                     onChange={(e) => setLastName(e.target.value)}
                   />
-                  
+
                 </p>
               </div>
               {/* department */}
+              <span>Department:</span>
               <div className="field">
-                <p className="control">
-                  <input
+                <div className="select">
+                  <select
                     value={department}
                     className="input"
                     type="input"
                     placeholder="Department"
                     onChange={(e) => setDepartment(e.target.value)}
-                  />
-                 
-                </p>
+                  >
+                    
+                    <option>Administration</option>
+                    <option>Classifed Staff</option>
+                    <option>English</option>
+                    <option>Foreign Language</option>
+                    <option> Health and P.E.</option>
+                    <option>Math</option>
+                    <option>Science</option>
+                    <option>Social Studies</option>
+                    <option>Shop and Agriculture</option>
+                    <option>SPED</option>
+                    <option>Visual and Performing Arts</option>
+                    <option>Other</option>
+                  </select>
+                </div>
               </div>
               <div className="field">
                 <p className="control has-icons-left">
@@ -123,10 +137,10 @@ function Login() {
                   </span>
                 </p>
               </div>
-                <button
-                  className="button is-success is-inverted is-outlined"
-                  type="submit">
-                  Submit
+              <button
+                className="button is-success is-inverted is-outlined"
+                type="submit">
+                Submit
                 </button>
               <div className="has-text-centered">
                 <br></br>
@@ -141,10 +155,10 @@ function Login() {
           </div>
         </form>
         <div id="success">
-         
+
         </div>
-    </div>
-       
+      </div>
+
     </>
   );
 }
