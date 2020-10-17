@@ -2,7 +2,10 @@ import axios from "axios";
 
 
 export default {
-  saveLesson: function (lessonData) {
+signup: function(){
+    return axios.post("signup")
+},  
+saveLesson: function (lessonData) {
     return axios.post("/lesson", lessonData);
 },
 
