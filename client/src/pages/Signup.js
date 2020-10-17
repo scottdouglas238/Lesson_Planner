@@ -5,11 +5,13 @@ import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
 import { Link } from "react-router-dom";
+
 function Login(props) {
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [department, setDepartment] = useState("");
@@ -17,6 +19,7 @@ function Login(props) {
   const handleToggle = () => {
     setActive(!isActive);
   };
+
   function signUp(e) {
     e.preventDefault();
     fetch("/signup", {
@@ -104,7 +107,9 @@ function Login(props) {
                     className="input"
                     type="input"
                     placeholder="Department"
+
                     onChange={(e) => setDepartment(e.target.value)}>
+
                     <option>Administration</option>
                     <option>Classifed Staff</option>
                     <option>English</option>
