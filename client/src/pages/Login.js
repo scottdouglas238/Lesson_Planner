@@ -4,6 +4,7 @@ import { LOGIN } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   const history = useHistory();
@@ -37,62 +38,70 @@ function Login() {
   }
   return (
     <>
-    <div className="tile is-8 is-parent " id="right"></div>
-    <div className="tile is-5 is-parent" id="left">
-      <form onSubmit={login}>
-        <div className="tile is-child">
-          <p className="title is-2 name">L-plan</p>
-          <hr className="hr" />
-          <div className="content has-text-grey description">
-            <div className="field">
-              <p className="control has-icons-left has-icons-right">
-                <input
-                  value={email}
-                  className="input"
-                  type="text"
-                  placeholder="Email"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
+      <div className="tile is-8 is-parent " id="right"></div>
+      <div className="tile is-5 is-parent" id="left">
+        <form onSubmit={login}>
+          <div className="tile is-child">
+            <p className="title is-2 name">L-plan</p>
+            <hr className="hr" />
+            <div className="content has-text-grey description">
+              <div className="field">
+                <p className="control has-icons-left has-icons-right">
+                  <input
+                    value={email}
+                    className="input"
+                    type="text"
+                    placeholder="Email"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope" />
+                  </span>
+                </p>
+              </div>
+              <div className="field">
+                <p className="control has-icons-left">
+                  <input
+                    value={password}
+                    className="input"
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-lock" />
+                  </span>
+                </p>
+                <button
+                  className="button is-success is-inverted is-outlined"
+                  type="submit">
+                  Submit
+                </button>
+              </div>
+              <div className="has-text-centered">
+                <br></br>
+                <br></br>
+                <img
+                  className="openbook has-text-centered"
+                  src={img}
+                  alt="Open Notebook"
                 />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope" />
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input
-                  value={password}
-                  className="input"
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-lock" />
-                </span>
-              </p>
-              <button
-                className="button is-success is-inverted is-outlined"
-                type="submit">
-                Submit
-              </button>
-            </div>
-            <div className="has-text-centered">
-              <br></br>
-              <br></br>
-              <img
-                className="openbook has-text-centered"
-                src={img}
-                alt="Open Notebook"
-              />
+              </div>
             </div>
           </div>
-        </div>
-      </form>
-    </div>
-  </>
+        </form>
+        <Link to="/signup">
+          {" "}
+          <button
+            className="button is-success is-inverted is-outlined"
+            type="submit">
+            Submit
+          </button>
+        </Link>
+      </div>
+    </>
   );
 }
 
