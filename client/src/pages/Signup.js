@@ -43,8 +43,6 @@ function Login(props) {
           payload: data.message,
         });
         handleToggle();
-        // ReactDOM.render(<Success/>, document.querySelector("#success"))
-        // history.push("/profile");
       })
       .catch((err) => console.log(err));
   }
