@@ -17,7 +17,6 @@ function DepartmentTile(props) {
             .then((res) => setLessons(res.data))
             .catch((err) => console.log(err));
     }
-    console.log(lessons);
     return (
       <div className="cards">
         {lessons.map((lesson) => (

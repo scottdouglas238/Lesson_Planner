@@ -39,7 +39,6 @@ function Update(props) {
 
 function handleFormSubmit(event) {
   event.preventDefault();
-    console.log("asdlfkjasdwelrkjqwe");
     API.editLesson({
       _id: id,
       userId: globalState.user.id,
