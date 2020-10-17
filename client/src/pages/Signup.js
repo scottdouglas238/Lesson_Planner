@@ -4,9 +4,10 @@ import { LOGIN } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
+import { Link } from "react-router-dom";
 
 
-function Login() {
+function Login(props) {
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
 
@@ -15,6 +16,16 @@ function Login() {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [department, setDepartment] = useState("")
+  const [isActive, setActive] = useState("false")
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
+
+
+
+  
   
 
   function signUp(e) {
@@ -42,6 +53,7 @@ function Login() {
         // ReactDOM.render(<Success/>, document.querySelector("#success"))
         // history.push("/profile");
       })
+      .then(handleToggle())
       .catch((err) => console.log(err));
   }
   return (
@@ -125,10 +137,12 @@ function Login() {
               </div>
                 <button
                   className="button is-success is-inverted is-outlined"
-                  type="submit">
+                type="submit"
+              >
                   Submit
                 </button>
               <div className="has-text-centered">
+                <span class={isActive ? "hidden" : "show"}>Sign-up successful, please click <Link to="/">here</Link> to log in.</span>
                 <br></br>
                 <br></br>
                 <img
@@ -140,9 +154,7 @@ function Login() {
             </div>
           </div>
         </form>
-        <div id="success">
-         
-        </div>
+      
     </div>
        
     </>
