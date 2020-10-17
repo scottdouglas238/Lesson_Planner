@@ -11,9 +11,10 @@ module.exports = function (app) {
   });
   //will be able to add a user/teacher
   app.post("/signup", (req, res) => {
-    db.create(req.body).then((dbUser) => {
-      res.json(dbUser);
-    });
+    db.create(req.body)
+      .then((dbUser) => {
+        res.json(dbUser);
+      })
   });
   //create a lesson
   app.post("/lesson", (req, res) => {
