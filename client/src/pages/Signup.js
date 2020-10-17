@@ -44,7 +44,7 @@ function Login(props) {
           type: LOGIN,
           payload: data.message,
         })
-      handleToggle();    
+      handleToggle();
         // ReactDOM.render(<Success/>, document.querySelector("#success"))
         // history.push("/profile");
       })

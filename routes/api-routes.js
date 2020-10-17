@@ -11,9 +11,18 @@ module.exports = function (app) {
   });
   //will be able to add a user/teacher
   app.post("/signup", (req, res) => {
-    db.create(req.body).then((dbUser) => {
-      res.json(dbUser);
-    });
+    db.findOne({email: req.body.email}, (err, doc) =>{
+      if(err) throw err;
+      if(doc){ console.log("User Already Exists")};
+      if(!doc){
+        db.create(req.body).then((dbUser) => {
+          res.json(dbUser);
+        })
+        .catch((err) =>{
+          console.log(err)
+        })
+      }
+    })
   });
   //create a lesson
   app.post("/lesson", (req, res) => {
