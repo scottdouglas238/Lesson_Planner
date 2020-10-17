@@ -6,7 +6,7 @@ module.exports = function (app) {
   //Authinticate the user
   app.post("/login", passport.authenticate("local"), function (req, res) {
     res.json({
-      message: { id: req.user.id, email: req.user.email, department: req.user.department },
+      message: { id: req.user.id, email: req.user.email, department: req.user.department, firstName: req.user.firstName, lastName: req.user.lastName},
     });
   });
   //will be able to add a user/teacher

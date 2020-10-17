@@ -14,7 +14,7 @@ function LessonPlanForm({history}) {
       [name]: value,
     });
   }
-  
+
   function Redirect() {
     history.push("/profile")
   }
@@ -57,11 +57,13 @@ function LessonPlanForm({history}) {
                 <label className="label">Teacher Name</label>
                 <div className="control pt-8">
                   <input
+                    value={globalState.user.firstName + " " + globalState.user.lastName}
                     className="input"
                     type="text"
                     name="teacherName"
                     placeholder="Text input"
                     onChange={handleInputChange}
+                    readOnly
                   />
                 </div>
               </div>
@@ -80,22 +82,14 @@ function LessonPlanForm({history}) {
               <div className="field">
                 <label className="label">Department</label>
                 <div className="control">
-                  <div className="select">
-                    <select name="department" onChange={handleInputChange}>
-                      <option>Math</option>
-                      <option>English</option>
-                      <option>Science</option>
-                      <option>Social Studies</option>
-                      <option>Foreign Language</option>
-                      <option>Visual and Performing Arts</option>
-                      <option>P.E. and Health</option>
-                      <option>S.T.E.M and Technology</option>
-                      <option>Shop and Agriculture</option>
-                      <option>SPED</option>
-                      <option>k-2nd</option>
-                      <option>3rd-5th</option>
-                      <option>Other</option>
-                    </select>
+                  <div>
+                    <input 
+                    name="department" 
+                    className="input"
+                    value={globalState.user.department}
+                    onChange={handleInputChange}>
+                      
+                    </input>
                   </div>
                 </div>
               </div>
