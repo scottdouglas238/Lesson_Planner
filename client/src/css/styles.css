@@ -75,8 +75,13 @@ body {
         top: 0;
     }
 }
-
-
+/* signup link */
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
 /* Keyframes */
 
 @keyframes slideDown {

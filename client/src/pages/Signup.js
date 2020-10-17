@@ -4,7 +4,7 @@ import { LOGIN } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
-
+import {Link} from "react-router-dom";
 
 function Login() {
   const history = useHistory();
@@ -16,7 +16,6 @@ function Login() {
   const [lastName, setLastName] = useState("")
   const [department, setDepartment] = useState("")
   
-
   function signUp(e) {
     e.preventDefault();
     fetch("/signup", {
@@ -38,10 +37,8 @@ function Login() {
         dispatch({
           type: LOGIN,
           payload: data.message,
-        });
-        // ReactDOM.render(<Success/>, document.querySelector("#success"))
-        // history.push("/profile");
-      })
+        })
+      }).then()
       .catch((err) => console.log(err));
   }
   return (
@@ -128,6 +125,9 @@ function Login() {
                   type="submit">
                   Submit
                 </button>
+                <div className="hidden" id="hidden">
+                  You have successfully created an account! Click <Link to="/">here</Link> to log in!
+                </div>
               <div className="has-text-centered">
                 <br></br>
                 <br></br>
@@ -140,9 +140,6 @@ function Login() {
             </div>
           </div>
         </form>
-        <div id="success">
-         
-        </div>
     </div>
        
     </>
