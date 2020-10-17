@@ -1,16 +1,22 @@
 import React from "react";
+import LessonPlanButton from "./newLessonPlanbutton"
 
 function Navbar() {
   return (
     <nav className="navbar bk">
-      <div className="container ">
+     
         <div className="navbar-brand">
-          <p className="navbar-item has-text-white is-size-3 has-text-weight-bold">
-            L-Plan
-          </p>
+          <span className="navbar-item has-text-white is-size-3 has-text-weight-bold">
+          L-Plan
+          </span>
+          <span className="navbar-item ">
+        <LessonPlanButton/>
+          </span>
         </div>
-      </div>
     </nav>
-  );
-}
-export default Navbar;
+          );
+        }
+        export default Navbar;
+          
+        
+      
