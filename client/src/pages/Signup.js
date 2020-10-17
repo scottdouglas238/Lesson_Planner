@@ -12,6 +12,9 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [department, setDepartment] = useState("")
 
   function signUp(e) {
     e.preventDefault();
@@ -24,6 +27,9 @@ function Login() {
       body: JSON.stringify({
         email,
         password,
+        department,
+        firstName,
+        lastName
       }),
     })
       .then((res) => res.json())
@@ -32,7 +38,7 @@ function Login() {
           type: LOGIN,
           payload: data.message,
         });
-        history.push("/profile");
+        // history.push("/profile");
       })
       .catch((err) => console.log(err));
   }
@@ -45,6 +51,7 @@ function Login() {
             <p className="title is-2 name">L-plan</p>
             <hr className="hr" />
             <div className="content has-text-grey description">
+            {/* this is where the email goes */}
               <div className="field">
                 <p className="control has-icons-left has-icons-right">
                   <input
@@ -61,38 +68,41 @@ function Login() {
                   </span>
                 </p>
               </div>
+              {/* this is where the first name goes */}
               <div className="field">
                 <p className="control">
                   <input
-                    value={password}
+                    value={firstName}
                     className="input"
-                    type="password"
+                    type="text"
                     placeholder="First Name"
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setFirstName(e.target.value)}
                   />
                  
                 </p>
               </div>
+              {/* last name */}
               <div className="field">
                 <p className="control">
                   <input
-                    value={password}
+                    value={lastName}
                     className="input"
-                    type="password"
+                    type="input"
                     placeholder="Last Name"
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setLastName(e.target.value)}
                   />
                   
                 </p>
               </div>
+              {/* department */}
               <div className="field">
                 <p className="control">
                   <input
-                    value={password}
+                    value={department}
                     className="input"
-                    type="password"
+                    type="input"
                     placeholder="Department"
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setDepartment(e.target.value)}
                   />
                  
                 </p>
@@ -111,9 +121,6 @@ function Login() {
                   </span>
                 </p>
               </div>
-
-
-
                 <button
                   className="button is-success is-inverted is-outlined"
                   type="submit">
