@@ -5,6 +5,7 @@ import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
 import { Link } from "react-router-dom";
+import "../css/style.scss"
 
 function Login() {
   const history = useHistory();
@@ -12,8 +13,11 @@ function Login() {
 
   const [email, setEmail] = useState("science@science.com");
   const [password, setPassword] = useState("12345");
+  const [isActive, setActive] = useState("false");
 
-  
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
 
   function login(e) {
     e.preventDefault();
@@ -36,7 +40,7 @@ function Login() {
         });
         history.push("/profile");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => handleToggle());
   }
   return (
     <>
@@ -81,27 +85,28 @@ function Login() {
                   type="submit">
                   Submit
                 </button>
+                
               </div>
+                <span class={isActive ? "hidden" : "show"} id="red">
+                 The email or password you have entered is invalid, please check the fields and try again.
+                </span>
               <div className="has-text-centered">
-                <br></br>
-                <br></br>
+                
+             
                 <img
                   className="openbook has-text-centered"
                   src={img}
                   alt="Open Notebook"
                 />
-              </div>
+                <br></br>
+              <div className="has-text-centered"></div>
+                <span>Not a member? Sign up <Link to="/signup">here</Link>.</span>
             </div>
+              </div>
           </div>
         </form>
-        <Link to="/signup">
-          {" "}
-          <button
-            className="button is-success is-inverted is-outlined"
-            type="submit">
-            Submit
-          </button>
-        </Link>
+      
+       
       </div>
     </>
   );

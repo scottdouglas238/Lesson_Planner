@@ -5,23 +5,18 @@ import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
 import "../css/styles.css";
 import { Link } from "react-router-dom";
-
 function Login(props) {
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [department, setDepartment] = useState("")
-  
-  const [isActive, setActive] = useState("false")
-
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [department, setDepartment] = useState("");
+  const [isActive, setActive] = useState("false");
   const handleToggle = () => {
     setActive(!isActive);
   };
-
   function signUp(e) {
     e.preventDefault();
     fetch("/signup", {
@@ -35,7 +30,7 @@ function Login(props) {
         password,
         department,
         firstName,
-        lastName
+        lastName,
       }),
     })
       .then((res) => res.json())
@@ -43,14 +38,13 @@ function Login(props) {
         dispatch({
           type: LOGIN,
           payload: data.message,
-        })
-      handleToggle();    
+        });
+        handleToggle();
         // ReactDOM.render(<Success/>, document.querySelector("#success"))
         // history.push("/profile");
       })
       .catch((err) => console.log(err));
-    }
-    
+  }
   return (
     <>
       <div className="tile is-8 is-parent " id="right"></div>
@@ -87,7 +81,6 @@ function Login(props) {
                     placeholder="First Name"
                     onChange={(e) => setFirstName(e.target.value)}
                   />
-
                 </p>
               </div>
               {/* last name */}
@@ -100,7 +93,6 @@ function Login(props) {
                     placeholder="Last Name"
                     onChange={(e) => setLastName(e.target.value)}
                   />
-
                 </p>
               </div>
               {/* department */}
@@ -112,8 +104,7 @@ function Login(props) {
                     className="input"
                     type="input"
                     placeholder="Department"
-                    onChange={(e) => setDepartment(e.target.value)}
-                  > 
+                    onChange={(e) => setDepartment(e.target.value)}>
                     <option>Administration</option>
                     <option>Classifed Staff</option>
                     <option>English</option>
@@ -143,17 +134,20 @@ function Login(props) {
                   </span>
                 </p>
               </div>
-                <button
-                  className="button is-success is-inverted is-outlined"
-                type="submit"
-              >
-                  Submit
-                </button>
-                <div className="hidden" id="hidden">
-                  You have successfully created an account! Click <Link to="/">here</Link> to log in!
-                </div>
+              <button
+                className="button is-success is-inverted is-outlined"
+                type="submit">
+                Submit
+              </button>
+              <div className="hidden" id="hidden">
+                You have successfully created an account! Click{" "}
+                <Link to="/">here</Link> to log in!
+              </div>
               <div className="has-text-centered">
-                <span class={isActive ? "hidden" : "show"}>Sign-up successful, please click <Link to="/">here</Link> to log in.</span>
+                <span class={isActive ? "hidden" : "show"}>
+                  Sign-up successful, please click <Link to="/">here</Link> to
+                  log in.
+                </span>
                 <br></br>
                 <br></br>
                 <img
@@ -164,10 +158,9 @@ function Login(props) {
               </div>
             </div>
           </div>
-        </form> 
-    </div>
+        </form>
+      </div>
     </>
   );
 }
-
 export default Login;
