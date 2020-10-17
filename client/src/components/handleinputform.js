@@ -24,9 +24,9 @@ function LessonPlanForm({history}) {
     console.log(globalState.user.id);
     API.saveLesson({
       userId: globalState.user.id,
-      teacherName: formObject.teacherName,
+      teacherName: globalState.user.firstName + " " + globalState.user.lastName,
       lessonName: formObject.lessonName,
-      department: formObject.department,
+      department: globalState.user.department,
       course: formObject.course,
       gradeLevel: formObject.gradeLevel,
       concepts: formObject.concepts,

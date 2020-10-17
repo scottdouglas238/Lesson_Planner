@@ -15,6 +15,7 @@ function Login() {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [department, setDepartment] = useState("")
+  
 
   function signUp(e) {
     e.preventDefault();
@@ -38,6 +39,7 @@ function Login() {
           type: LOGIN,
           payload: data.message,
         });
+        // ReactDOM.render(<Success/>, document.querySelector("#success"))
         // history.push("/profile");
       })
       .catch((err) => console.log(err));
@@ -138,6 +140,9 @@ function Login() {
             </div>
           </div>
         </form>
+        <div id="success">
+         
+        </div>
     </div>
        
     </>
