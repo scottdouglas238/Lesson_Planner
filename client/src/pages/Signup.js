@@ -49,13 +49,14 @@ function Login(props) {
         dispatch({
           type: LOGIN,
           payload: data.message,
-        });
+        })
+      handleToggle();    
         // ReactDOM.render(<Success/>, document.querySelector("#success"))
         // history.push("/profile");
       })
-      .then(handleToggle())
       .catch((err) => console.log(err));
-  }
+    }
+    
   return (
     <>
       <div className="tile is-8 is-parent " id="right"></div>
