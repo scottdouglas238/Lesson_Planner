@@ -75,12 +75,12 @@ body {
         top: 0;
     }
 }
-/* signup link */
-.hidden{
-    display: none;
+.hidden {
+    display: none
 }
-.show{
-    display: block;
+
+.show {
+    display: block
 }
 /* Keyframes */
 
