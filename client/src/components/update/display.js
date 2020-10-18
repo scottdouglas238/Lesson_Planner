@@ -16,7 +16,7 @@ console.log(setGlobalState)
 console.log(Link)
   useEffect(() => {
     getLesson(id);
-  }, []);
+  }, [id]);
 
   function Redirect() {
     props.history.push("/profile");
