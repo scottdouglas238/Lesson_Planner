@@ -9,7 +9,8 @@ import { useStoreContext } from "../utils/GlobalState";
 
 function TeacherLanding() {
       const [globalState, setGlobalState] = useStoreContext();
-
+  console.log(API)
+  console.log(setGlobalState)
   return (
     <>
       <Navbar />
