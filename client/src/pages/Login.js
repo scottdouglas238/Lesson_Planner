@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { LOGIN } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
+import invis from "../media/invis.png";
 import "../css/styles.css";
 import { Link } from "react-router-dom";
 import "../css/style.scss"
@@ -105,10 +106,15 @@ console.log(state)
                 <span>Not a member? Sign up <Link to="/signup">here</Link>.</span>
             </div>
               </div>
+                <img
+                  className="openbook has-text-centered"
+                  src={invis}
+                  alt="Open Notebook"
+                />
+       
           </div>
         </form>
       
-       
       </div>
     </>
   );

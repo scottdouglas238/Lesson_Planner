@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { SIGNUP } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
+import invis from "../media/invis.png";
 import "../css/styles.css";
 import { Link } from "react-router-dom";
 
@@ -58,7 +59,7 @@ function Login(props) {
             <hr className="hr" />
             <div className="content has-text-grey description">
               {/* this is where the email goes */}
-              <span>Department:</span>
+              <span className="has-text-white">Department:</span>
               <div className="field">
                 <div className="select">
                   <select
@@ -153,16 +154,23 @@ function Login(props) {
                   log in.
                 </span>
                 <br></br>
-                <br></br>
+
                 <img
                   className="openbook has-text-centered"
                   src={img}
                   alt="Open Notebook"
                 />
               </div>
-              <span>
-                Already a member? Click <Link to="/">here</Link> to log in.
-              </span>
+              <div className="has-text-centered">
+                <span>
+                  Already a member? Click <Link to="/">here</Link> to log in.
+                </span>
+              </div>
+              <img
+                className="openbook has-text-centered invis"
+                src={invis}
+                alt="Open Notebook"
+              />
             </div>
           </div>
         </form>
@@ -171,3 +179,7 @@ function Login(props) {
   );
 }
 export default Login;
+  
+        
+             
+           
