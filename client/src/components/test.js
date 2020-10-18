@@ -1,150 +1,165 @@
-<>
-  <form>
-    <Navbar />
-    <div className="container has-text-left test">
-      <div className="columns">
-        <div className="column is-12">
-          <div className="field">
-            <label className="label">Teacher Name</label>
-            <div className="control pt-8">
-              <input
-                value={
-                  globalState.user.firstName + " " + globalState.user.lastName
-                }
-                className="input"
-                type="text"
-                name="teacherName"
-                placeholder="Text input"
-                onChange={handleInputChange}
-                readOnly
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Lesson Name</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="lessonName"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Department</label>
-            <div className="control">
-              <div>
+  <>
+    <form>
+      <Navbar />
+      <div className="container">
+        {/* beginning of first set of columns */}
+        <div className="columns">
+          <div className="column">
+            <div className="field">
+              <label className="label">Teacher Name</label>
+              <div className="control pt-8">
                 <input
-                  name="department"
-                  className="input"
-                  value={globalState.user.department}
-                  onChange={handleInputChange}></input>
+                  name="teacherName"
+                  value={lesson.teacherName}
+                  onChange={handleInputChange}
+                />
               </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Course</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="course"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+          <div className="column">
+            <div className="field">
+              <label className="label">Lesson Name</label>
+              <div className="control">
+                <input
+                  name="lessonName"
+                  value={lesson.lessonName}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Grade Level</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="gradeLevel"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+          <div className="column">
+            <div className="field">
+              <label className="label">Department</label>
+              <div className="control">
+                <div>
+                  <input
+                    name="department"
+                    value={lesson.department}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Concepts</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="concepts"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+          <div className="column">
+            <div className="field">
+              <label className="label">Course</label>
+              <div className="control">
+                <input
+                  name="course"
+                  value={lesson.course}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Standards</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="standards"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+          <div className="column">
+            <div className="field">
+              <label className="label">Grade Level</label>
+              <div className="control">
+                <input
+                  name="gradeLevel"
+                  value={lesson.gradeLevel}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Skills</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="skills"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+        </div>
+        {/* end of first set of columns */}
+        {/* beginning of second set of columns */}
+        <div className="columns">
+          <div className="column">
+            <div className="field">
+              <label className="label">Concepts</label>
+              <div className="control">
+                <input
+                  name="concepts"
+                  value={lesson.concepts}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Objectives</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="objectives"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+          <div className="column">
+            <div className="field">
+              <label className="label">Standards</label>
+              <div className="control">
+                <input
+                  name="standards"
+                  value={lesson.standards}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Materials</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="materials"
-                placeholder="Text input"
-                onChange={handleInputChange}
-              />
+        </div>
+        {/* end of second set of columns */}
+        {/* beginning of third set of columns */}
+        <div className="columns">
+          <div className="column">
+            <div className="field">
+              <label className="label">Skills</label>
+              <div className="control">
+                <input
+                  name="skills"
+                  value={lesson.skills}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Goal</label>
-            <div className="control">
-              <textarea
-                className="textarea"
-                placeholder="Textarea"
-                name="goal"
-                onChange={handleInputChange}></textarea>
+          <div className="column">
+            <div className="field">
+              <label className="label">Objectives</label>
+              <div className="control">
+                <input
+                  name="objectives"
+                  value={lesson.objectives}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
           </div>
+        </div>
+        {/* end of third set of columns */}
+        {/* beginning of fourth set of columns */}
+        <div className="columns">
+          <div className="column is-one-third">
+            <div className="field">
+              <label className="label">Materials</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  name="materials"
+                  value={lesson.materials}
+                  onChange={handleInputChange}></textarea>
+              </div>
+            </div>
+          </div>
+          <div className="column is-two-thirds">
+            <div className="field">
+              <label className="label">Goal</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  name="goal"
+                  value={lesson.goal}
+                  onChange={handleInputChange}></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* end of fourth set of columns */}
+        <div>
           <div className="field">
             <label className="label">Opening Activity</label>
             <div className="control">
               <textarea
                 className="textarea"
-                placeholder="Textarea"
                 name="openingActivity"
+                value={lesson.openingActivity}
                 onChange={handleInputChange}></textarea>
             </div>
           </div>
@@ -153,8 +168,8 @@
             <div className="control">
               <textarea
                 className="textarea"
-                placeholder="Textarea"
                 name="activity"
+                value={lesson.activity}
                 onChange={handleInputChange}></textarea>
             </div>
           </div>
@@ -163,35 +178,30 @@
             <div className="control">
               <textarea
                 className="textarea"
-                placeholder="Textarea"
                 name="assessment"
+                value={lesson.assessment}
                 onChange={handleInputChange}></textarea>
             </div>
           </div>
           <div className="field">
             <label className="label">Closing Activity</label>
             <div className="control">
-              <textarea
-                className="textarea"
-                placeholder="Textarea"
+                          <textarea
+                              className="textarea"
                 name="closingActivity"
+                value={lesson.closingActivity}
                 onChange={handleInputChange}></textarea>
             </div>
           </div>
         </div>
+        <br></br>
+        <button className="cardBtn" onClick={handleFormSubmit}>
+          Submit
+        </button>
+        <button className="cardBtn">
+          <Link to="/profile">Cancel</Link>
+        </button>
       </div>
-      <div className="field is-grouped">
-        <div className="control">
-          <button className="button is-link" onClick={handleFormSubmit}>
-            Submit
-          </button>
-        </div>
-        <div className="control">
-          <button className="button is-link is-light">
-            <Link to="/profile">Cancel</Link>
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
-</>;
+      <br></br>
+    </form>
+  </>;
