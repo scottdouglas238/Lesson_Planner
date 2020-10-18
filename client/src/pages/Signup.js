@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { SIGNUP } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import img from "../media/58a1cef7e33a543010fac265.png";
@@ -7,7 +6,6 @@ import "../css/styles.css";
 import { Link } from "react-router-dom";
 
 function Login(props) {
-  const history = useHistory();
   const [state, dispatch] = useStoreContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +21,7 @@ function Login(props) {
     setFirstName("")
     setLastName("")
   };
-
+  console.log(state)
   function signUp(e) {
     e.preventDefault();
     fetch("/signup", {
