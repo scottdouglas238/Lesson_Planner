@@ -6,6 +6,7 @@ import Label from "./label"
 import Box from "./box"
 import "../../css/style.scss"
 import { Link } from "react-router-dom";
+import "../../css/landingpagestyle.css"
 
 function Display(props) {
   const [lesson, setLesson] = useState({});
@@ -24,7 +25,7 @@ function Display(props) {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container appear">
         <div className="columns">
           <div className="column">
             <Label>

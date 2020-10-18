@@ -6,7 +6,7 @@ function LessonPlanButton() {
   return (
     
       <Link to="/newLessonPlan">
-        <button className="Btn">Create new lesson plan</button>
+        <button className="Btn cardBtn">Create new lesson plan</button>
       </Link>
    
   );

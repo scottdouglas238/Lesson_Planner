@@ -5,6 +5,7 @@ import img from "../media/58a1cef7e33a543010fac265.png";
 import invis from "../media/invis.png";
 import "../css/styles.css";
 import { Link } from "react-router-dom";
+import "../css/landingpagestyle.css"
 
 function Login(props) {
   const [state, dispatch] = useStoreContext();
@@ -148,7 +149,7 @@ function Login(props) {
                 You have successfully created an account! Click{" "}
                 <Link to="/">here</Link> to log in!
               </div>
-              <div className="has-text-centered">
+              <div className="has-text-centered appear">
                 <span class={isActive ? "hidden" : "show"}>
                   Sign-up successful, please click <Link to="/">here</Link> to
                   log in.
