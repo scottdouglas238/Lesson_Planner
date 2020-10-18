@@ -5,6 +5,7 @@ import API from "../../utils/API";
 import Label from "./label"
 import Box from "./box"
 import "../../css/style.scss"
+import { Link } from "react-router-dom";
 
 function Display(props) {
   const [lesson, setLesson] = useState({});
@@ -140,7 +141,9 @@ function Display(props) {
         <Box>
           <p>{lesson.closingActivity}</p>
         </Box>
+        <Link to="/profile">
       <button className="cardBtn">Go back</button>
+        </Link>
       </div>
       <br></br>
     </>
