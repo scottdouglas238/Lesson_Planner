@@ -82,6 +82,12 @@ body {
 .show {
     display: block
 }
+.logOut {
+    color: white;
+}
+.logOut:hover {
+    color: lightblue;
+}
 /* Keyframes */
 
 @keyframes slideDown {
