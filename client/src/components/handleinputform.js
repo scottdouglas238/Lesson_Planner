@@ -3,6 +3,7 @@ import API from "../utils/API";
 import Navbar from "./navbar";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
+import '../css/style.scss'
 
 function LessonPlanForm({history}) {
   const [globalState, setGlobalState] = useStoreContext();
@@ -14,7 +15,7 @@ function LessonPlanForm({history}) {
       [name]: value,
     });
   }
-
+  console.log(setGlobalState)
   function Redirect() {
     history.push("/profile")
   }
@@ -50,23 +51,29 @@ function LessonPlanForm({history}) {
     <>
       <form>
         <Navbar />
-        <div className="container has-text-left test">
+        <div className="container">
+          {/* beginning of first set of columns */}
           <div className="columns">
-            <div className="column is-12">
+            <div className="column">
               <div className="field">
                 <label className="label">Teacher Name</label>
                 <div className="control pt-8">
                   <input
-                    value={globalState.user.firstName + " " + globalState.user.lastName}
+                    value={
+                      globalState.user.firstName +
+                      " " +
+                      globalState.user.lastName
+                    }
                     className="input"
                     type="text"
                     name="teacherName"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                     readOnly
                   />
                 </div>
               </div>
+            </div>
+            <div className="column">
               <div className="field">
                 <label className="label">Lesson Name</label>
                 <div className="control">
@@ -74,25 +81,26 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="lessonName"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+            <div className="column">
               <div className="field">
                 <label className="label">Department</label>
                 <div className="control">
                   <div>
-                    <input 
-                    name="department" 
-                    className="input"
-                    value={globalState.user.department}
-                    onChange={handleInputChange}>
-                      
-                    </input>
+                    <input
+                      name="department"
+                      className="input"
+                      value={globalState.user.department}
+                      onChange={handleInputChange}></input>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="column">
               <div className="field">
                 <label className="label">Course</label>
                 <div className="control">
@@ -100,11 +108,12 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="course"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+            <div className="column">
               <div className="field">
                 <label className="label">Grade Level</label>
                 <div className="control">
@@ -112,11 +121,16 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="gradeLevel"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          {/* end of first set of columns */}
+          {/* beginning of second set of columns */}
+          <div className="columns">
+            <div className="column">
               <div className="field">
                 <label className="label">Concepts</label>
                 <div className="control">
@@ -124,11 +138,12 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="concepts"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+            <div className="column">
               <div className="field">
                 <label className="label">Standards</label>
                 <div className="control">
@@ -136,11 +151,16 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="standards"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          {/* end of second set of columns */}
+          {/* beginning of third set of columns */}
+          <div className="columns">
+            <div className="column">
               <div className="field">
                 <label className="label">Skills</label>
                 <div className="control">
@@ -148,11 +168,12 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="skills"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+            <div className="column">
               <div className="field">
                 <label className="label">Objectives</label>
                 <div className="control">
@@ -160,93 +181,93 @@ function LessonPlanForm({history}) {
                     className="input"
                     type="text"
                     name="objectives"
-                    placeholder="Text input"
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          {/* end of third set of columns */}
+          {/* beginning of fourth set of columns */}
+          <div className="columns">
+            <div className="column is-one-third">
               <div className="field">
                 <label className="label">Materials</label>
                 <div className="control">
-                  <input
-                    className="input"
+                  <textarea
+                    className="textarea"
                     type="text"
                     name="materials"
-                    placeholder="Text input"
-                    onChange={handleInputChange}
-                  />
+                    placeholder=""
+                    onChange={handleInputChange}></textarea>
                 </div>
               </div>
+            </div>
+            <div className="column is-two-thirds">
               <div className="field">
                 <label className="label">Goal</label>
                 <div className="control">
                   <textarea
                     className="textarea"
-                    placeholder="Textarea"
+                    placeholder=""
                     name="goal"
                     onChange={handleInputChange}></textarea>
                 </div>
               </div>
-              <div className="field">
-                <label className="label">Opening Activity</label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    placeholder="Textarea"
-                    name="openingActivity"
-                    onChange={handleInputChange}></textarea>
-                </div>
+            </div>
+          </div>
+          {/* end of fourth set of columns */}
+          <div>
+            <div className="field">
+              <label className="label">Opening Activity</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Textarea"
+                  name="openingActivity"
+                  onChange={handleInputChange}></textarea>
               </div>
-              <div className="field">
-                <label className="label">Activity</label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    placeholder="Textarea"
-                    name="activity"
-                    onChange={handleInputChange}></textarea>
-                </div>
+            </div>
+            <div className="field">
+              <label className="label">Activity</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Textarea"
+                  name="activity"
+                  onChange={handleInputChange}></textarea>
               </div>
-              <div className="field">
-                <label className="label">Assessment</label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    placeholder="Textarea"
-                    name="assessment"
-                    onChange={handleInputChange}></textarea>
-                </div>
+            </div>
+            <div className="field">
+              <label className="label">Assessment</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Textarea"
+                  name="assessment"
+                  onChange={handleInputChange}></textarea>
               </div>
-              <div className="field">
-                <label className="label">Closing Activity</label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    placeholder="Textarea"
-                    name="closingActivity"
-                    onChange={handleInputChange}></textarea>
-                </div>
+            </div>
+            <div className="field">
+              <label className="label">Closing Activity</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Textarea"
+                  name="closingActivity"
+                  onChange={handleInputChange}></textarea>
               </div>
             </div>
           </div>
-          <div className="field is-grouped">
-            <div className="control">
-              <button
-                className="button is-link"
-                onClick=
-                  {handleFormSubmit}
-                
-                >
-                Submit
-              </button>
-            </div>
-            <div className="control">
-              <button className="button is-link is-light">
-                <Link to="/profile">Cancel</Link>
-              </button>
-            </div>
-          </div>
+          <br></br>
+          <button className="cardBtn" onClick={handleFormSubmit}>
+            Submit
+          </button>
+          <button className="cardBtn">
+            <Link to="/profile">Cancel</Link>
+          </button>
         </div>
+          <br></br>
       </form>
     </>
   );
