@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
 import '../css/style.scss'
+import '../css/landingpagestyle.css'
 
 function LessonPlanForm({history}) {
   const [globalState, setGlobalState] = useStoreContext();
@@ -51,7 +52,7 @@ function LessonPlanForm({history}) {
     <>
       <form>
         <Navbar />
-        <div className="container">
+        <div className="container appear">
           {/* beginning of first set of columns */}
           <div className="columns">
             <div className="column">
