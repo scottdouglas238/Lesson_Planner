@@ -20,7 +20,7 @@ function Login() {
   };
 
   
-
+console.log(state)
   function login(e) {
     e.preventDefault();
     fetch("/login", {
@@ -89,7 +89,7 @@ function Login() {
                 </button>
                 
               </div>
-                <span class={isActive ? "hidden" : "show"} id="red">
+                <span className={isActive ? "hidden" : "show"} id="red">
                  The email or password you have entered is invalid, please check the fields and try again.
                 </span>
               <div className="has-text-centered">
