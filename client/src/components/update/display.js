@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import Navbar from "../navbar";
 import API from "../../utils/API";
-import Label from "./label"
-import Box from "./box"
+import "../../css/landingpagestyle.css"
 
 
 function Update(props) {
@@ -54,7 +53,7 @@ function handleFormSubmit(event) {
     <>
       <form>
         <Navbar />
-        <div className="container">
+        <div className="container appear">
           {/* beginning of first set of columns */}
           <div className="columns">
             <div className="column">
