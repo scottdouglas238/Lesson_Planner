@@ -1,12 +1,9 @@
 import React from "react";
 import LessonPlanButton from "./newLessonPlanbutton"
-import { useStoreContext } from "../utils/GlobalState";
 import "../css/style.scss"
 import { Link } from "react-router-dom";
 
 function Navbar() {
-    const [globalState, setGlobalState] = useStoreContext();
-
   return (
     <nav className="navbar bk">
       <div className="navbar-brand">
