@@ -12,8 +12,8 @@ function Login() {
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
 
-  const [email, setEmail] = useState("science@science.com");
-  const [password, setPassword] = useState("12345");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isActive, setActive] = useState("false");
 
   const handleToggle = () => {
