@@ -12,14 +12,14 @@ function Display(props) {
   const id = props.match.params.id;
 
   useEffect(() => {
+    function getLesson(id) {
+      API.getLesson(id)
+        .then((res) => setLesson(res.data))
+        .catch((err) => console.log(err));
+    }
     getLesson(id);
-  }, []);
+  }, [id]);
 
-  function getLesson(id) {
-    API.getLesson(id)
-      .then((res) => setLesson(res.data))
-      .catch((err) => console.log(err));
-  }
 
   return (
     <>
