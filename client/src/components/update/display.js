@@ -6,13 +6,14 @@ import API from "../../utils/API";
 import "../../css/landingpagestyle.css"
 
 
+
 function Update(props) {
-  const [lesson, setLesson] = useState({});
+  const [lesson, setLesson] = useState("");
   const id = props.match.params.id;
   console.log(props)
   const [globalState, setGlobalState] = useStoreContext();
-console.log(setGlobalState)
-console.log(Link)
+  console.log(setGlobalState)
+  console.log(Link)
   useEffect(() => {
     getLesson(id);
   }, [id]);
@@ -37,18 +38,18 @@ console.log(Link)
 
 
 
-function handleFormSubmit(event) {
-  event.preventDefault();
+  function handleFormSubmit(event) {
+    event.preventDefault();
     API.editLesson({
       _id: id,
       userId: globalState.user.id,
-     ...lesson
+      ...lesson
     })
       .then(Redirect())
       // ^ make this a redirect back to the teacher landing page
       .catch((err) => console.log(err));
-  
-}
+
+  }
   return (
     <>
       <form>
