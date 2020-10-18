@@ -31,4 +31,6 @@ Due to this lack of support, far too many great teachers end up leaving the prof
 While this application will in no way solve all of the issues facing teachers, our hope is that in some small way, this application will allow those who nurture future generations to find at least one small part of their job a bit easier. 
 
 ##Deployment
-This app ![is deployed via Heroku and Mongo Atlas](https://sheltered-hollows-22179.herokuapp.com)
+This app [is deployed via Heroku and Mongo Atlas](https://sheltered-hollows-22179.herokuapp.com)
+
+![A screenshot of the application](./client/public/assets/l-planscreenshot.png)
