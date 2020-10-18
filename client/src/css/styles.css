@@ -75,6 +75,7 @@ body {
         top: 0;
     }
 }
+
 .hidden {
     display: none
 }
@@ -82,12 +83,20 @@ body {
 .show {
     display: block
 }
+
 .logOut {
     color: white;
 }
+
 .logOut:hover {
     color: lightblue;
 }
+
+.invis {
+    max-height: 200px;
+}
+
+
 /* Keyframes */
 
 @keyframes slideDown {
@@ -98,6 +107,28 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -150,8 +181,14 @@ body {
     animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
 }
 
-.new {
-    animation-name: slideLeft;
+.animateNav {
+    animation-name: slideDown;
+    animation-duration: 300ms
+}
+
+.animateLogout {
+    animation-name: slideFromLeft;
+    animation-duration: 300ms
 }
 
 
