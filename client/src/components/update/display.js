@@ -12,7 +12,8 @@ function Update(props) {
   const id = props.match.params.id;
   console.log(props)
   const [globalState, setGlobalState] = useStoreContext();
-
+console.log(setGlobalState)
+console.log(Link)
   useEffect(() => {
     getLesson(id);
   }, []);
@@ -49,11 +50,6 @@ function handleFormSubmit(event) {
       .catch((err) => console.log(err));
   
 }
-
-
-
-  
-
   return (
     <>
       <Navbar />

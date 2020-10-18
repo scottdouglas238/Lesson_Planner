@@ -10,6 +10,7 @@ import Update from "./components/update/display";
 
 function App() {
   const [state] = useStoreContext();
+  console.log(state)
   return (
     <div className="App">
       <Switch>
@@ -23,6 +24,7 @@ function App() {
     </div>
   );
 }
+console.log(Link)
 
 function PrivateRoute({ component: Component, ...props }) {
   const [state] = useStoreContext();
