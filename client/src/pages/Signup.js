@@ -65,23 +65,22 @@ function Login(props) {
                     type="input"
                     placeholder="Department"
                     onChange={(e) => setDepartment(e.target.value)}>
-                                        <option>Administration</option>
-                                        <option>Classifed Staff</option>
-                                        <option>English</option>
-                                        <option>Foreign Language</option>
-                                        <option> Health and P.E.</option>
-                                        <option>Math</option>
-                                        <option>Science</option>
-                                        <option>Social Studies</option>
-                                        <option>Shop and Agriculture</option>
-                                        <option>SPED</option>
-                                        <option>Visual and Performing Arts</option>
-                                        <option>Other</option>
+                    <option>Administration</option>
+                    <option>Classifed Staff</option>
+                    <option>English</option>
+                    <option>Foreign Language</option>
+                    <option> Health and P.E.</option>
+                    <option>Math</option>
+                    <option>Science</option>
+                    <option>Social Studies</option>
+                    <option>Shop and Agriculture</option>
+                    <option>SPED</option>
+                    <option>Visual and Performing Arts</option>
+                    <option>Other</option>
                   </select>
                 </div>
               </div>
 
-                    
               <div className="field">
                 <p className="control has-icons-left has-icons-right">
                   <input
@@ -159,6 +158,9 @@ function Login(props) {
                   alt="Open Notebook"
                 />
               </div>
+              <span>
+                Already a member? Click <Link to="/">here</Link> to log in.
+              </span>
             </div>
           </div>
         </form>
