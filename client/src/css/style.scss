@@ -112,8 +112,9 @@ $navbar: #2b3c1e;
     color: $red;
 }
 
-#logOut {
-    align-items: right;
+.box {
+    background-color: $card;
+    font-family: $plex;
 }
 
 //animations
