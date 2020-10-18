@@ -18,6 +18,10 @@ function Login(props) {
   const [isActive, setActive] = useState("false");
   const handleToggle = () => {
     setActive(!isActive);
+    setEmail("")
+    setPassword("")
+    setFirstName("")
+    setLastName("")
   };
 
   function signUp(e) {
